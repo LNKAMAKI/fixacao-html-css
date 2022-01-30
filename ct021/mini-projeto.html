@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Html e Css</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        a {
+            text-decoration: none;
+            color: orange;
+        }
+        a:visited {
+            color: peru;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: darkorange;
+        }
+        a:active {
+           color: orangered;
+    
+        }
+        a::before {
+            content: "🐱";
+            font-style: normal;
+        }
+        a::after {
+        content: "🐱";
+        font-style: normal;
+        }
+        #surpresa > p{
+         display: none;
+        }
+
+        #surpresa:active > p{
+            color: pink;
+            display: block;
+            background-color: black;
+        }
+        pre {
+            margin: 0px;
+        }
+
+    
+    </style>
+</head> 
+
+<body>
+<main><abbr title="Cascading Style Sheets"><strong>CSS</strong></abbr></main>
+<hr color= "black">
+<h2 id="tipograf" style="text-align: center; font-family: Time;">PRIMEIRO MINI PROJETO</h2>
+<div id="efect"></div>
+<div id="fontypes" style="text-align: center;">
+    <span class="title">WIREFRAME</span>
+   <p>O primeiro passo para criar um site é imaginar como vai ser o seu layout, ou seja, a disposição do conteúdo na tela.
+   Isso se chama wireframe e facilita a criação de sites.
+   </p>
+   <p>No nosso primeiro mini projeto, usaremos o seguinte wireframe:</p>
+   <code style="font-size: 1.5em;">
+   <pre>
+   &lt;<span style="color: blue;">header</span>&gt; &lt;/<span style="color: blue;">header</span>&gt;<br> 
+   &lt;<span style="color: blue;">nav</span>&gt; &lt;/<span style="color: blue;">nav</span>&gt;<br> 
+   &lt;<span style="color: blue;">main</span>&gt;<br> 
+   &lt;<span style="color: blue;">article</span>&gt; <br>
+   &lt;<span style="color: blue;">aside</span>&gt; &lt;/<span style="color: blue;">aside</span>&gt;<br> 
+   &lt;/<span style="color: blue;">article</span>&gt;<br> 
+   &lt;/<span style="color: blue;">main</span>&gt;<br> 
+   &lt;<span style="color: blue;">footer</span>&gt; &lt;/<span style="color: blue;">footer</span>&gt;</pre></code><br>
+ <p>Lembrando que esse é só um exemplo enquanto existe muitas outras formas de organizar o conteúdo em um site.</p>
+ <span style="font-size: 1.5em; font-family: Time;">LARGURA E ALTURA ADAPTÁVEIS</span>
+ <p>Agora vamos ir para a parte de responsividade, que é a adaptação do nosso site a vários tamanhos de tela.  </p>
+ <p>Para isso, vamos precisar utilizar os conceitos de <span class="prop">min-width/max-width</span> e <span class="prop"> min-height/max-height</span>:</p>
+ <p></p>
+
+ <code style="font-size: 1.5em;">
+    <pre>
+       &lt;<span style="color: blue;">style</span>&gt; 
+    <span class="seletor">main</span> { 
+        <span class="prop">min-width</span>: <span class="string">400px</span>;
+        <span class="prop">max-width</span>: <span class="string">1080px</span>;
+    }
+    &lt;/<span style="color: blue;">style</span>&gt;</pre></code>
+<p>Assim, o elemento <span class="tag">main</span> não ficará menor que 400px e nem ultrapassará 1080px.</p>
+
+<span style="font-size: 1.5em; font-family: Time;">VARIÁVEIS EM CSS</span>
+<p>Agora iremos falar sobre um assunto importante: variáveis em CSS. Elas vem sucedidas por <span class="prop">--</span> e atribuimos valores a elas dentro do seletor <span class="seletor">:root</span>:</p>
+<code style="font-size: 1.5em;">
+    <pre>
+       &lt;<span style="color: blue;">style</span>&gt; 
+    <span style="color: goldenrod;">:root</span> { 
+        <span class="prop">--cor1</span>: <span class="string">blue</span>;
+        <span class="prop">--cor2</span>: <span class="string">pink</span>;
+    }
+    &lt;/<span style="color: blue;">style</span>&gt;</pre></code>
+    <p>Usando variáveis em CSS podemos configurar o estilo de um elemento sem ter que repetir cores, por exemplo: </p>
+<code style="font-size: 1.5em;">
+    <pre>
+       &lt;<span style="color: blue;">style</span>&gt; 
+    <span style="color: goldenrod;">h1</span> { 
+        <span class="prop">background-color</span>: <span class="seletor">var</span>(<span class="prop">--cor1</span>);
+        <span class="prop">color</span>: <span class="seletor">var</span>(<span class="prop">--cor2</span>);
+    }
+    &lt;/<span style="color: blue;">style</span>&gt;</pre></code>
+        <p>Então, em vez de copiar e colar o código de uma cor toda vez que quisermos usá-la, podemos nos referir a ela usando uma variável.</p>
+        <span style="font-size: 1.5em; font-family: Time;">USANDO O SELETOR *</span>
+        <p>Em CSS, existe o seletor <span class="tag">*</span> que se refere a todos os elementos do código HTML:</p>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span class="tag">*</span> { 
+    <span class="prop">margin</span>: <span class="string">0px</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code>
+<p>Dessa forma, podemos eliminar as margens indesejadas que são adicionadas a certos elementos pelos user agents.</p>
+<span style="font-size: 1.5em; font-family: Time;">ESPAÇAMENTO ENTRELINHAS</span>
+<p>Podemos configurar o espaçamento entre as linhas do nosso texto para facilitar a leitura. Quanto maior for esse espaçamento mais fácil será compreendê-lo:</p>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span class="seletor">p</span> { 
+    <span class="prop">line-height</span>: <span class="string">2em</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code><br>
+    <span style="font-size: 1.5em; font-family: Time;">SOMBRA EM TEXTOS</span>
+    <p>Colocamos sombra em textos da mesma forma que fazemos com caixas:</p>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span class="seletor">p</span> { 
+    <span class="prop">text-shadow</span>: <span class="string">2px 2px 0px black</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code>    <br>
+<span style="font-size: 1.5em; font-family: Time;">PERSONALIZANDO AS LISTAS</span>
+<p>Vamos aprender agora algumas configurações que podemos fazer para personalizar nossas listas: </p>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span class="seletor">ul</span> { 
+    <span class="prop">list-style-position</span>: <span class="string">inside</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code> 
+<p>Usando esse comando, os marcadores passarão a ser exibidos na parte interna da caixa que contém a lista, já que, por padrão, a caixa de uma lista não inclui os marcadores. </p> 
+<code style="font-size: 1.5em;">
+    <pre>
+       &lt;<span style="color: blue;">style</span>&gt; 
+    <span class="seletor">ul</span> { 
+        <span class="prop">list-style-type</span>: <span class="string">'<span class="seletor">\1F517\00A0\00A0</span>'</span>;
+    }
+    &lt;/<span style="color: blue;">style</span>&gt;</pre></code> 
+    <p>Esse outro comando serve para mudar o marcador para um emoji, usando o seu código disponível na emojipedia. </p>
+    <p>No exemplo, <span class="seletor"><code>\1F517</code></span> é o código do emoji e <span class="seletor"><code>\00A0</code></span> é o espaço em branco a ser deixado entre o marcador e o item da lista.</p>
+<code style="font-size: 1.5em;">
+    <pre>
+       &lt;<span style="color: blue;">style</span>&gt; 
+    <span class="seletor">ul</span> { 
+        <span class="prop">columns</span>: <span class="string">2</span>;
+    }
+    &lt;/<span style="color: blue;">style</span>&gt;</pre></code> 
+    <p>E, por último, podemos dividir a lista em quantas colunas quisermos para caso ela fique muito extensa.</p>
+    <span style="font-size: 1.5em; font-family: Time;">ADAPTANDO VÍDEOS</span><br>
+    <p>Já aprendemos a como adaptar o tamanho de uma imagem de acordo com a largura da tela, agora vamos aprender a como fazer o mesmo só que com vídeos. </p>
+    <p>O primeiro passo para fazer isso é colocar o nosso <span class="tag">iframe</span> dentro de uma <span class="tag">div</span>:</p>
+    <code style="font-size: 1.5em;"><pre>
+    &lt;<span class="tag">div</span> <span class="prop">class</span>:<span class="string">'video'</span>&gt; 
+    <span class="value">//código do iframe(onde fica o vídeo)</span>
+    &lt;<span class="tag">/div</span>&gt;
+</pre></code>
+<p>O segundo passo é fazer declarações para essa <span class="tag">div</span>:</p>
+<code style="font-size: 1.5em;">
+   <pre>
+       &lt;<span style="color: blue;">style</span>&gt; 
+<span class="seletor">div.video</span> { 
+        <span class="prop">background-color</span>: <span class="seletor">var</span>(<span class="prop">--cor4</span>);
+        <span class="prop">margin</span>: <span class="string"> 0px <span style="text-decoration: underline ;">-20px</span> 5px <span style="text-decoration: underline;">-20px</span></span>;
+        <span class="prop">padding</span>: <span class="string">10px 0px <span style="text-decoration: underline;">60%</span> 0px</span>;
+        <span class="prop" style="text-decoration: underline;">position</span>: <span class="string" style="text-decoration: underline;">relative</span>;
+    }
+    &lt;/<span style="color: blue;">style</span>&gt;</pre></code> <br>
+    <p>Lembrando que é preciso mudar a propriedade <span class="prop">position</span> para <span class="string">relative</span> e colocar uma porcentagem referente ao <span class="prop">padding-bottom</span>,
+    já que, nessa situação, mudar o <span class="prop">height</span> para <span class="string">n%</span> não funcionaria.
+    </p>
+    <p>A <span class="prop">margin-left</span> e a<span class="prop"> margin-right</span> de <span class="string">-20px</span> permitem que a <span class="tag">div</span> ocupe toda a largura do elemento em que está contida, já que geralmente há um "espacinho" entre um e outro. </p>
+    <p>O terceiro e último passo é configurar o <span class="tag">iframe</span> dentro da <span class="tag">div</span>:</p>
+<code style="font-size: 1.5em;">
+    <pre>
+       &lt;<span class="tag">style</span>&gt; 
+<span class="seletor">div.video > iframe</span> { 
+        <span class="prop" style="text-decoration: underline;">position</span>: <span class="string" style="text-decoration: underline;">absolute</span>;
+        <span class="prop">top</span>: <span class="string">5%</span>;
+        <span class="prop">left</span>: <span class="string">5%</span>;
+        <span class="prop">width</span>: <span class="string">90%</span>;
+        <span class="prop" style="text-decoration: underline;">height</span>: <span class="string" style="text-decoration: underline;">90%</span>; 
+    }
+    &lt;/<span style="color: blue;">style</span>&gt;</pre></code>
+    <p>Lembre-se é preciso mudar a propriedade <span class="prop">position</span> para <span class="string">absolute</span> e a propriedade <span class="prop">height</span> para <span class="string">n%</span> no seletor do <span class="tag">iframe</span>. </p> 
+    <p style="margin-bottom: 0px; padding-bottom: 20px;">As propriedades <span class="prop">top</span> e <span class="prop">left</span> se referem ao deslocamento de cima e da esquerda e são representadas por porcentagens.</p>
+
+    
+   
+</div>  
+<div id="efect2"></div>
+</body>
+</html>

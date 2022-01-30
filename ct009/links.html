@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Html e Css</title>
+    <style>
+        body {
+            background-color: rgb(211, 232, 233);
+        }
+        h1 {
+            font-size: 50px;
+        }
+        h2{
+         font-size: 35px;
+         color:rgba(15, 80, 202, 0.89);
+        }
+        
+        h3 {
+            font-size: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1><abbr title="Hypertext Markup Language">HTML</abbr></h1>
+    <hr color= "black">
+    <h2>LINKS  &#x1F517</h2>
+    <h2><span style="color: rgb(18, 156, 156);">Externos</span></h2>
+    <h3>Para colocar links dentro de um documento HTML, usa-se a tag <code>&lt;<span style="color: blue;"><abbr title="anchor">a</abbr></span>&gt;</code> e
+    quando o link é de um <ins>site externo</ins> <br> <br>
+    o ideal é que ele abra em uma outra guia, tornando-se necessário usar o parâmetro <span style="color: crimson;">target</span> <br> <br>
+    <em>Exemplo:</em> <br>
+    Acesse a plataforma <a href="https://scratch.mit.edu/" target="_blank" rel="external">Scratch</a> 
+    <p>O comando usado aqui foi:</p>
+    <p><code>&lt;<span style="color: blue;">a</span> <span style="color: rgb(100, 184, 177);">href</span>= <span style="color: rgb(189, 55, 38);">"https://scratch.mit.edu/"</span> <span style="color: crimson;">target</span>=<span style="color:rgb(189, 55, 38) ;">"_blank"</span> <mark style="background-color: cyan;">rel="external"</mark>&gt;Scratch&lt;/<span style="color: blue;">a</span>&gt;</code> </p>
+    <p>Também é importante indicar, com o parâmetro <span style="color: crimson;">rel</span>, o destino do link, que nesse caso é 
+    <span style="color: darkblue;">external</span></p> <br>
+</h3>  
+<h2>Em que língua está o site?</h2>
+<h3>Se o site para qual o link direciona está em outra língua, é importante indicá-la ao sistema, para que a ferramenta de <br>
+    tradução possa entrar em ação caso o usuário queira traduzir:
+    <p><code>&lt;<span style="color: blue;">a</span> <span style="color: rgb(100, 184, 177);">href</span>= <span style="color: rgb(189, 55, 38);">"URL do site"</span></span> <span style="color: crimson;"><ins>hreflang</ins></span>=<span style="color:rgb(59, 161, 230) ;">"en"</span></mark>&gt;Site(em inglês)&lt;/<span style="color: blue;">a</span>&gt;</code> </p>
+        </p> <br>
+</h3>
+
+<h2><span style="color: rgb(18, 156, 156);">Internos</span></h2>
+<h3>Já os links internos são do nosso próprio site, por isso eles podem ter como alvo a própria guia 
+<p><em>Exemplo:</em></p>
+<p>Aperte aqui para ir a <a href="links2.html" target= "_self" rel="next">segunda página</a></p> 
+<p>O comando usado aqui foi:</p>
+<p><code>&lt;<span style="color: blue;">a </span><span style="color: rgb(100, 184, 177);">href</span>= <span style="color: rgb(189, 55, 38);">"links2.html"</span> <span style="color: crimson;">target</span>=<span style="color:rgb(189, 55, 38) ;">"_self"</span> <mark style="background-color: cyan;">rel="next"</mark>&gt;outra página&lt;/<span style="color: blue;">a</span>&gt;</code></p>
+<br><p><big>Arquivo em</big> <big><span style="color: blue;">📁 interna</span></big></p>
+<p>Se é para colocar o link de um arquivo que está em uma pasta interna, basta apertar <span style="color: rgb(214, 121, 15);">Ctrl + espaço</span>, <br>clicar no nome da pasta e depois do arquivo</p>
+<p><em>Exemplo:</em></p>
+<p>Aperte aqui para ir a outra pasta e acessar a <a href="outra pasta/links3.html">terceira página</a></p>
+<p>O comando usado aqui foi:</p>
+<p><code>&lt;<span style="color: blue;">a </span><span style="color: rgb(100, 184, 177);">href</span>= <span style="color: rgb(189, 55, 38);">"outra pasta/links3.html"</span> <span style="color: crimson;">target</span>=<span style="color:rgb(189, 55, 38) ;">"_self"</span>&gt;terceira página&lt;/<span style="color: blue;">a</span>&gt;</code></p>
+</h3> <br>
+
+<h2><span style="color: rgb(18, 156, 156);">Para Download 📥</span></h2>
+<h3>Por fim, temos os links para dowload, onde há o acréscimo de apenas dois novos parâmetros
+<p><em>Exemplo:</em></p>
+<p>Clique: <a href="imagem/imagem.png" download="imagem.png" type="image/png">Baixar imagem </a></p>
+O comando usado aqui foi: 
+<p><code>&lt;<span style="color: blue;">a </span><span style="color: rgb(100, 184, 177);">href</span>= <span style="color: rgb(189, 55, 38);">"imagem/imagem.png"</span> <span style="color: crimson;">dowload</span>=<span style="color:rgb(189, 55, 38) ;">"imagem.png"  <span style="color: crimson;">type</span>=<span style="color:rgb(189, 55, 38) ;">"image/png"</span><span style="color: black;">&gt;Baixar imagem&lt;</span></span>/<span style="color: blue;">a</span>&gt;</code></p></p>
+<p>Ou seja, quando o link é para dowload, coloca-se o parâmetro <span style="color: rgb(18, 153, 144);">dowload</span>, indicando o nome do arquivo a ser baixado,</p>
+<p>e o parâmetro <span style="color:rgb(18, 153, 144) ;">type</span>, onde é colocado o tipo do arquivo, que pode ser vários</p>
+<big><span style="color: black;">Media types</span></big> mais comuns:
+<ul type= "disc">
+    <li>application/zip</li>
+    <li>text/html</li>
+    <li>text/css</li>
+    <li>text/javascript</li>
+    <li>video/mp4</li>
+    <li>video/H264</li>
+    <li>video/JPEG</li>
+    <li>audio/aac</li>
+    <li>audio/mpeg</li>
+    <li>font/ttf</li>
+    <li>image/jpeg</li>
+    <li>image/png</li>
+
+</ul>
+</h3>
+
+
+
+
+ 
+    
+    
+    
+    
+</body>
+</html>

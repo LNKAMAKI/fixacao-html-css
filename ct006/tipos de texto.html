@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Html e Css</title>
+    <style>
+        body {
+            background-color: rgb(211, 232, 233);
+        }
+        h1 {
+            font-size: 50px;
+        }
+        h2{
+         font-size: 35px;
+         color:rgba(15, 80, 202, 0.89);
+        }
+        
+        h3 {
+            font-size: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1><abbr title="Hypertext Markup Language">HTML</abbr> </h1>
+    <hr color= "black">
+    <h2><span style="color: rgb(124, 55, 202);">TIPOS DE TEXTO</span></h2>
+<h2>Negrito e<em> Itálico</em></h2>
+<h3>
+    Em vez de usar as tags <code>&lt;<abbr title="italic">i</abbr>&gt;</code> e
+        <code>&lt;<abbr title="bold">b</abbr>&gt;</code>, deve-se ser usado as tags:
+        <code>
+            <ul type= "disc">
+             <li>&lt;strong&gt;</li>
+             <li>&lt;em&gt; </code>&rarr; emphasis</li>
+            </ul>              
+</h3>
+<h2><mark>Texto Marcado</mark></h2>
+<h3><code>&lt;mark&gt; &lt;/mark&gt;</code></h3>
+<h3>Mudar a <mark style="background-color: pink;">cor</mark> da caneta: <br>
+    <p>De um texto específico:</p>
+    <pre><code>&lt;<span style="color:blue;">mark</span> <span style="color: rgb(65, 197, 197);">style</span><span style="color: rgb(199, 198, 198);">=</span><span style="color:  rgb(212, 78, 45);">"background-color: cor;"</span>&gt;cor&lt;/<span style="color: blue;"><span style="color:rgb(199, 198, 198);">mark</span></span>&gt;</code></pre>
+    <p>De todos os textos:</p>
+    <pre><code>
+     &lt;<span style="color: blue;">style</span>&gt;
+     mark {
+        <span style="color: rgb(65, 197, 197);">background-color:</span><span style="color: yellowgreen;">cor</span>;
+     }
+    &lt;/<span style="color: blue;">style</span>&gt;
+        </code></pre>
+</h3>
+<h2>Texto<big> grande</big> e <small>pequeno</small></h2>
+<h3>Como vimos, a tag<code> &lt;<span style="color: tomato;">big</span>&gt;</code> é considerada obsoleta na versão mais nova da linguagem, <br>
+    mas a tag <code>&lt;<span style="color: blue;">small</span>&gt;</code> continua ativa
+</h3>
+<h2><del>Texto Deletado</del></h2>
+<h3>&rarr; Quando queremos que um texto seja lido mas <del>não considerado</del> usamos a tag <code>&lt;<span style="color: blue;">del</span>&gt;</code>
+</h3>
+<h2>Texto <ins>Inserido</ins></h2>
+<h3>&rarr; Substituição da tag<code> &lt;<span style="color: blue;">u</span>&gt;</code>, usada 
+para <ins>dar ênfase</ins> e indicar que o texto foi inserido depois</h3>
+<h2>Texto <sup>sobrescrito</sup> e <sub>subescrito</sub></h2>
+  <h3>
+      <mark>Sobre</mark>scrito: <code>&lt;<span style="color:blue;">sup</span>&gt;</code> <br>
+      <mark>Sub</mark>escrito: <code><span style="color:blue ;">&lt;sub&gt;</span></code>
+  </h3>
+</body>
+</html>

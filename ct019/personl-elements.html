@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Html e Css</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+           @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @font-face {
+            font-family: 'Time' ;
+            src: url('KGWhatATime.ttf') format('truetype');
+    
+        }
+        a {
+            text-decoration: none;
+            color: orange;
+        }
+        a:visited {
+            color: peru;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: darkorange;
+        }
+        a:active {
+           color: orangered;
+    
+        }
+        a::before {
+            content: "🐱";
+            font-style: normal;
+        }
+        a::after {
+        content: "🐱";
+        font-style: normal;
+        }
+        #surpresa > p{
+         display: none;
+        }
+
+        #surpresa:active > p{
+            color: pink;
+            display: block;
+            background-color: black;
+        }
+
+    
+    </style>
+</head> 
+
+<body>
+<main><abbr title="Cascading Style Sheets"><strong>CSS</strong></abbr></main>
+<hr color= "black">
+<h2 id="tipograf" style="text-align: center; font-family: Time;">SELETORES PERSONALIZADOS</h2>
+<div id="efect"></div>
+<div id="fontypes" style="text-align: center;">
+    <span style="font-size: 1.5em; font-family: Time;">IDENTIFICANDO ELEMENTOS</span>
+<p>Podemos configurar o estilo de um elemento específico usando a propriedade 
+    <span style="color: cadetblue ;">id</span>:</p>
+    <code style="font-size: 1.5em;">&lt;<span style="color: blue;">h1</span> 
+     <span style="color: cadetblue;">id</span>= <span style="color: indianred;">"principal"</span>&gt;HTML&lt;/<span style="color: blue;">h1</span>&gt;</pre></code></code>
+
+
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">h1#principal</span> {
+    <span style="color: cadetblue;">background-color</span>: <span style="color: indianred;">white</span>;  
+ }
+ &lt;/<span style="color: blue;">style</span>&gt;</pre></code>
+ <p>Assim, em vez de mudar o estilo de todos os <span style="color: blue;">h1</span>, 
+    essa declaração só irá alterar o <span style="color: blue;">h1</span> com 
+    o <span style="color: cadetblue;">id</span> <span style="color: indianred;">principal</span>.</p>
+    <span style="font-size: 1.5em; font-family: Time;">CLASSIFICANDO ELEMENTOS</span>
+    <p>Não pode haver elementos com o mesmo <span style="color: cadetblue;">id</span> em um documento. É por isso que existe a propriedade <span style="color: cadetblue;">class</span>, que permite configurar o estilo de mais de um elemento: </p>
+    <code style="font-size: 1.5em;">&lt;<span style="color: blue;">h1</span> 
+        <span style="color: cadetblue;">class</span>= <span style="color: indianred;">"principal"</span>&gt;HTML&lt;/<span style="color: blue;">h1</span>&gt;</pre></code></code> <p>
+    <code style="font-size: 1.5em;">&lt;<span style="color: blue;">h1</span> 
+        <span style="color: cadetblue;">class</span>= <span style="color: indianred;">"principal"</span>&gt;CSS&lt;/<span style="color: blue;">h1</span>&gt;</pre></code></code>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">h1.principal</span> {
+    <span style="color: cadetblue;">background-color</span>: <span style="color: indianred;">white</span>;  
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code>   
+<p>Dessa maneira, os dois <span style="color: blue;">h1</span> com <span style="color: cadetblue;">class</span> <span style="color: indianred;">principal</span>
+terão a cor branca como fundo.
+</p>  
+<p>Vale ressaltar que não precisamos colocar o nome do elemento antes do <span style="color: cadetblue;">id</span> ou da <span style="color: cadetblue;">class</span>.
+Os exemplos dados poderiam ter ficado assim:
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">#principal</span> {
+    <span style="color: cadetblue;">background-color</span>: <span style="color: indianred;">white</span>;  
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code>
+
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">.principal</span> {
+    <span style="color: cadetblue;">background-color</span>: <span style="color: indianred;">white</span>;  
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code>
+</p>
+<p>Outra informação importante é que um elemento pode ter mais de uma <span class="prop">class</span>:</p>
+<code style="font-size: 1.5em;">&lt;<span style="color: blue;">h1</span> 
+    <span style="color: cadetblue;">class</span>= <span style="color: indianred;">"principal destaque"</span>&gt;HTML&lt;/<span style="color: blue;">h1</span>&gt;</pre></code></code> <p>
+    <span style="font-size: 1.5em; font-family: Time;">PSEUDO-CLASSES</span>
+    <p>Para entender o que é pseudo-classe, vamos por um exemplo em prática:</p>
+        <p>Visite a minha página do <a href="https://scratch.mit.edu/" target="_blank" rel="external" class="la">Scratch</a></p>
+    
+    <p>Quando colocamos um link em nosso site ele já vem sublinhado, com a cor <span class="tag">azul</span> ou <span style="color: purple;">roxo</span>(se já o visitamos antes).</p>
+    <p>Mas podemos mudar o seu estilo usando as pseudo-classes:</p>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">a</span> {
+    <span class="prop">text-decoration</span>: <span class="string">none</span>;  
+    <span class="prop">color</span>: <span class="string">orange</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code> 
+<span style="font-size: 1.8em;">&rarr;</span> Tira o sublinhado do link e muda a sua cor para laranja
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">a:visited</span> { 
+<span class="prop">color</span>: <span class="string">peru</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code> 
+<span style="font-size: 1.8em;">&rarr;</span> Muda a cor do link para peru se ele já tiver sido visitado
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">a:hover</span> { 
+    <span class="prop">text-decoration</span>: <span class="string">underline</span>;
+    <span class="prop">color</span>: <span class="string">darkorange</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code> 
+    <span style="font-size: 1.8em;">&rarr;</span> Deixa o link sublinhado e muda sua cor para laranja escuro quando o mouse passar em cima
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">a:active</span> { 
+<span class="prop">color</span>: <span class="string">orangered</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code> <span style="font-size: 1.8em;">&rarr;</span> Muda a cor do link para vermelho-alaranjado quando foi clicado
+<p>Ou seja, uma pseudo-classe indica o estado do elemento de um seletor e vem depois do sinal de dois pontos.</p> 
+<p style="font-size: 1.7em; color: rgb(212, 28, 28);">IMPORTANTE!</p> 
+<span style="font-size: 1.1em;">
+    <div class="impor">
+        A ordem dos seletores importa quando usamos pseudo-classes! Então, obviamente, não vamos colocar o seletor a:active(quando o link for clicado)
+        antes do seletor a:hover(quando o mouse passar sobre o link).
+    </div>
+</span> <br>
+<span style="font-size: 1.5em; font-family: Time;">PSEUDO-ELEMENTOS</span>
+<p>Além das pseudo-classes, existe também o que chamamos de pseudo-elementos. Veja o código abaixo:
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">a::before</span> {
+    <span class="prop">content</span>: <span class="string">"<span style="font-style: normal;">🐱</span>"</span>; 
+    <span class="prop">font-style</span>: <span class="string">normal</span>;   
+}
+<span style="color: goldenrod;">a::after</span> {
+    <span class="prop">content</span>: <span class="string">"<span style="font-style: normal;">🐱</span>"</span>;  
+    <span class="prop">font-style</span>: <span class="string">normal</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code>
+<p>Ele foi usado para colocar o emoji de gato antes e depois do link.</p>
+<p>Portanto, pseudo-elementos se referem a uma parte específica do elemento de um seletor. Além do <span class="seletor">::after</span> e <span class="seletor">::before</span>, existem também
+<span class="seletor">::first-letter e <span class="seletor">::first-line</span></span>
+</p>
+                  <span style="font-family:Time; font-size: 1.5em;">CONTEÚDO ADICIONAL</span>
+<p>Vamos ver outro exemplo que usa pseudo-classe:</p>
+<div id="surpresa">
+    De uma olhada aqui!!!
+    <p>👀</p>
+</div>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">div</span> <span class="prop">id</span>=<span class="string">"surpresa"</span></span>&gt; 
+   De uma olhada aqui!!!
+   &lt;<span style="color: blue;">p</span>&gt;👀&lt;/<span style="color: blue;">p</span>&gt;
+}
+&lt;/<span style="color: blue;">div</span>&gt;</pre></code> 
+
+<code style="font-size: 1.5em;">
+<pre style="margin: 10px 0px 10px 0px;">
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">#surpresa > p</span> {
+    <span style="color: cadetblue;">display</span>: <span style="color: indianred;">none</span>;  
+} 
+<span style="color: goldenrod;">#surpresa:active > p</span> {
+    <span style="color: cadetblue;">display</span>: <span style="color: indianred;">block</span>;
+    <span style="color: cadetblue;">background-color</span>: <span style="color: indianred;">black</span>;
+    <span style="color: cadetblue;">width</span>: <span style="color: indianred;">880px</span>;  
+} 
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code>
+<p style="display: inline-block;"><span class="seletor">#surpresa > p</span> se refere ao parágrafo child da div com id surpresa.</p>
+</div>
+<div id="efect2"></div>
+
+</body>
+</html>

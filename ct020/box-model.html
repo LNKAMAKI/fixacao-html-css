@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Html e Css</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+           @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @font-face {
+            font-family: 'Time' ;
+            src: url('KGWhatATime.ttf') format('truetype');
+    
+        }
+        a {
+            text-decoration: none;
+            color: orange;
+        }
+        a:visited {
+            color: peru;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: darkorange;
+        }
+        a:active {
+           color: orangered;
+    
+        }
+        a::before {
+            content: "🐱";
+            font-style: normal;
+        }
+        a::after {
+        content: "🐱";
+        font-style: normal;
+        }
+        #surpresa > p{
+         display: none;
+        }
+
+        #surpresa:active > p{
+            color: pink;
+            display: block;
+            background-color: black;
+        }
+        pre {
+            margin: 0px;
+        }
+
+    
+    </style>
+</head> 
+
+<body>
+<main><abbr title="Cascading Style Sheets"><strong>CSS</strong></abbr></main>
+<hr color= "black">
+<h2 id="tipograf" style="text-align: center; font-family: Time;">BOX-MODEL</h2>
+<div id="efect"></div>
+<div id="fontypes" style="text-align: center;">
+    <span style="font-size: 1.5em; font-family: Time;">ANATOMIA DE UMA CAIXA</span>
+    <p>Em HTML, os elementos são como caixas  que guardam conteúdo. Elas possuem 5 partes que podem ser configuradas usando as CSS:</p>
+     <img src="box-anatomy.png" alt="box-anatomy">
+     <p style="margin: 5px;">A parte mais interna é onde fica o conteúdo, que possui as propriedades <span class="prop">width</span> e <span class="prop">height</span></p>
+        <p style="margin: 5px;">A camada que vem depois do conteúdo é o padding ou preenchimento</p>
+        <p style="margin: 5px;">A próxima camada é a border, a borda da caixa</p>
+        <p style="margin: 5px;">Depois da border, existe o outline, que não é mostrado na imagem</p>
+        <p style="margin-top: 5px;">E, por último, temos a margin, que dá espaçamento entre uma caixa e outra</p>
+        <span style="font-size: 1.5em; font-family: Time;">CONFIGURANDO PROPRIEDADES DA CAIXA</span>
+        <p style="font-weight: bolder;font-style: normal;color: cadetblue;">CONTEÚDO</p>
+        <p>Podemos configurar a altura e a largura do contéudo com as propriedades ditas anteriormente:</p>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">h1</span> { 
+<span class="prop">width</span>: <span class="string">800px</span>;
+<span class="prop">height</span>: <span class="string">200px</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code> <br>
+
+<p style="font-weight: bolder;font-style: normal;color: cadetblue;">PADDING</p>
+        <p>Podemos configurar as dimensões do padding com as seguintes propriedades:</p>
+ <p style="margin-left: 22px;">Comando completo</p>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">h1</span> { 
+    <span class="prop">padding-top</span>: <span class="string">10px</span>;
+    <span class="prop">padding-right</span>: <span class="string">20px</span>;
+    <span class="prop">padding-bottom</span>: <span class="string">30px</span>;
+    <span class="prop">padding-left</span>: <span class="string">40px</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code> <br>
+
+<p style="margin-left: 22px;">Shorthand</p>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">h1</span> { 
+<span class="prop">padding</span>: <span class="string">10px 20px 30px 40px</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code> <br>
+
+
+
+
+<p style="font-weight: bolder;font-style: normal;color: cadetblue;">BORDER</p>
+        <p>Podemos configurar a largura, o estilo e a cor da border :</p>
+<p style="margin-left: 22px;">Comando completo</p>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">h1</span> { 
+<span class="prop">border-width</span>: <span class="string">10px</span>;
+<span class="prop">border-style</span>: <span class="string">solid</span>;
+<span class="prop">border-color</span>: <span class="string">black</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code> <br>
+
+<p style="margin-left: 22px;">Shorthand</p>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">h1</span> { 
+<span class="prop">border</span>: <span class="string">10px solid black</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code> <br>
+
+<p style="font-weight: bolder;font-style: normal;color: cadetblue;">OUTLINE</p>
+        <p>As configurações do outline são os mesmos da border:</p>
+        <p style="margin-left: 22px;">Comando Completo</p>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">h1</span> { 
+<span class="prop">outline-width</span>: <span class="string">10px</span>;
+<span class="prop">outline-style</span>: <span class="string">solid</span>;
+<span class="prop">outline-color</span>: <span class="string">black</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code> <br>
+
+<p style="margin-left: 22px;">Shorthand</p>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">h1</span> { 
+<span class="prop">border</span>: <span class="string">10px solid black</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code> <br>
+
+
+<p style="font-weight: bolder;font-style: normal;color: cadetblue;">MARGIN</p>
+        <p>As configurações da margin são as mesmas do padding:</p>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+   <span class="prop">margin-top: <span class="string">10px</span>;
+   <span class="prop">margin-right</span>: <span class="string">20px</span>;
+   <span class="prop">margin-bottom</span>: <span class="string">30px</span>;
+   <span class="prop">margin-left</span>: <span class="string">40px</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code> <br>
+
+<p style="margin-left: 22px;">Shorthand</p>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">h1</span> { 
+<span class="prop">margin</span>: <span class="string">10px 20px 30px 40px</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code> <br>
+<span style="font-size: 1.5em; font-family: Time;">TIPOS DE CAIXA</span>
+<p style="font-weight: bolder;font-style: normal;color: cadetblue;">BLOCK-LEVEL</p>
+<p style="margin-bottom: 0px;">As caixas do tipo block-level ocupam toda a largura do body ou do elemento em que está contido e já vem com margin-top e margin-bottom.</p>
+<p>Exemplos de elementos <span style="font-weight: bolder;">BLOCK-LEVEL:</span></p>
+
+<code style="font-size: 1.5em;">
+    &lt;<span class="tag">section</span>&gt;
+    &lt;<span class="tag">pre</span>&gt;
+    &lt;<span class="tag">header</span>&gt;
+    &lt;<span class="tag">footer</span>&gt;
+    &lt;<span class="tag">dl</span>&gt;
+    &lt;<span class="tag">aside</span>&gt;
+    &lt;<span class="tag">video</span>&gt;
+    &lt;<span class="tag">blockquote</span>&gt;
+</code>
+
+<p style="font-weight: bolder;font-style: normal;color: cadetblue;">INLINE-LEVEL</p>
+<p style="margin-bottom: 0px;">Já as caixas do tipo inline-level ocupam somente o espaço necessário para caber o conteúdo e não possuem margem.</p>
+<p>Exemplos de elementos <span style="font-weight: bolder;">INLINE-LEVEL:</span></p>
+
+<code style="font-size: 1.5em;">
+    &lt;<span class="tag">span</span>&gt;
+    &lt;<span class="tag">input</span>&gt;
+    &lt;<span class="tag">button</span>&gt;
+    &lt;<span class="tag">img</span>&gt;
+    &lt;<span class="tag">a</span>&gt;
+    &lt;<span class="tag">q</span>&gt;
+    &lt;<span class="tag">code</span>&gt;
+    &lt;<span class="tag">output</span>&gt;
+</code> 
+<br><br>
+<span style="font-size: 1.5em; font-family: Time;">SOMBRA EM CAIXAS</span>
+<p>Podemos fazer sombra em caixas usando a propriedade <span class="prop">box-shadow</span>:</p>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">h1</span> { 
+    <span class="prop">box-shadow</span>: <span class="string">5px 5px 2px black</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code> <br>
+<p>Os valores que estão sendo configurados são, respectivamente:</p>
+<ul>
+    <li>Deslocamento horizontal</li>
+    <li>Deslocamento vertical</li>
+    <li>Espalhamento</li>
+    <li>Cor</li>
+</ul>
+<span style="font-size: 1.5em; font-family: Time;">VÉRTICES ARREDONDADOS</span>
+<p>Também podemos arredondar os vértices de uma caixa, usando a propriedade <span class="prop">border-radius</span>:</p>
+<code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+<span style="color: goldenrod;">h1</span> { 
+    <span class="prop">border-radius</span>: <span class="string">10px</span>;
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code> <br>
+</div>
+<div id="efect2"></div>
+</body>
+</html>

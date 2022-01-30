@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Html e Css</title>
+    <style>
+        body {
+            background-color: rgb(211, 232, 233);
+        }
+        h1 {
+            font-size: 50px;
+        }
+        h2{
+         font-size: 35px;
+         color:rgba(15, 80, 202, 0.89);
+        }
+        
+        h3 {
+            font-size: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1><abbr title="Hypertext Markup Language">HTML</abbr></h1>
+    <hr color= "black">
+    <h2>Imagens flexíveis</h2>
+    <h3> Já comentamos como se coloca uma imagem em um site, agora vamos falar sobre como adaptá-la ao 
+        tamanho da tela.
+        <p>Primeiro, precisamos usar a tag <code>&lt;<span style="color: blue;">picture</span>&gt;</code>:
+        <p><pre>
+            <code>&lt;<span style="color: blue;">picture</span>&gt;
+                <code>&lt;<span style="color: blue;">img</span> <span style="color: cadetblue;">src</span>=<span><span style="color: red;">"imagem.png"</span></span><span style="color: cadetblue;"> alt</span>=<span style="color: red;">"imagem"</span>&gt;</code>
+            &lt;/<span style="color: blue;">picture</span>&gt;</p></code></pre> <br>
+            
+        <p>Depois, precisamos gerar os tamanhos de imagem <span style="color: darkolivegreen;">        // pelo menos os tamanhos pequeno, médio e grande</span></p>
+         <p>e, logo em seguida, adicionar as tags <code>&lt;<span style="color: blue;">source</span>&gt;</code>:</p>
+         <p>
+            <pre>
+                <code>&lt;<span style="color: blue;">picture</span>&gt;
+                    <code>&lt;<span style="color: blue;">source</span> <span style="color: cadetblue;">media</span>=<span style="color: red;">"<abbr title="menor que 700px(tamanho imagem-m)">(max-width: 700px)</abbr>"</span> <span style="color: cadetblue;"><abbr title="aqui é colocado o nome da imagem">srcset</abbr></span>=<span style="color: red;">"imagem pequena.png"</span> <span style="color: cadetblue;"><abbr title="aqui é colocado o tipo da imagem">type</abbr></span>=<span style="color: red;">"image/png"</span>&gt; </code>
+                     <code>&lt;<span style="color: blue;">source</span> <span style="color: cadetblue;">media</span>=<span style="color: red;">"<abbr title="menor que 1000px(tamanho imagem-g)">(max-width: 1000px)</abbr>"</span> <span style="color: cadetblue;"><abbr title="aqui é colocado o nome da imagem">srcset</abbr></span>=<span style="color: red;">"imagem média.png"</span> <span style="color: cadetblue;"><abbr title="aqui é colocado o tipo da imagem">type</abbr></span>=<span style="color: red;">"image/png"</span>&gt; </code>
+                    <code>&lt;<span style="color: blue;">img</span> <span style="color: cadetblue;">src</span>=<span><span style="color: red;">"imagem grande.png"</span></span><span style="color: cadetblue;"> alt</span>=<span style="color: red;">"imagem grande"</span>&gt;</code>
+                &lt;/<span style="color: blue;">picture</span>&gt;</p></code></pre></p> <pre>                  ou          </pre>
+        <pre>                    <code>&lt;<span style="color: blue;">picture</span>&gt;
+                        <code>&lt;<span style="color: blue;">source</span> <span style="color: cadetblue;">media</span>=<span style="color: red;">"<abbr title="maior que 1000px(tamanho imagem-g)">(min-width: 1000px)</abbr>"</span> <span style="color: cadetblue;"><abbr title="aqui é colocado o nome da imagem">srcset</abbr></span>=<span style="color: red;">"imagem grande.png"</span> <span style="color: cadetblue;"><abbr title="aqui é colocado o tipo da imagem">type</abbr></span>=<span style="color: red;">"image/png"</span>&gt; </code>
+                         <code>&lt;<span style="color: blue;">source</span> <span style="color: cadetblue;">media</span>=<span style="color: red;">"<abbr title="maior que 700px(tamanho imagem-m)">(min-width: 700px)</abbr>"</span> <span style="color: cadetblue;"><abbr title="aqui é colocado o nome da imagem">srcset</abbr></span>=<span style="color: red;">"imagem média.png"</span> <span style="color: cadetblue;"><abbr title="aqui é colocado o tipo da imagem">type</abbr></span>=<span style="color: red;">"image/png"</span>&gt; </code>
+                        <code>&lt;<span style="color: blue;">img</span> <span style="color: cadetblue;">src</span>=<span><span style="color: red;">"imagem pequena.png"</span></span><span style="color: cadetblue;"> alt</span>=<span style="color: red;">"imagem pequena"</span>&gt;</code>
+                    &lt;/<span style="color: blue;">picture</span>&gt;</p></code></pre></p> <br>
+                                 
+         <p>Pode-se tanto colocar da maior para a menor imagem ou vice-versa, ou seja, se:</p> 
+         <p><em><span style="color: rgb(199, 53, 61);"><big>A imagem padrão for grande, então:</big></span></em></p>
+         <p><ul><li>Se o comprimento da tela for menor que o tamanho da <span style="color: darkcyan;">imagem grande</span>(ex: 1000px), então a imagem será substituída pela <span style="color: blue;">média</span></li>
+                <li>Se o comprimento da tela for menor que o tamanho da <span style="color: darkcyan;">imagem média</span>(ex: 700px), então a imagem será substituída pela imagem <span style="color: blue;">pequena</span></li>
+         </ul> <br>
+         </p> 
+         <p>Lembrando que a ordem deve ser de <span style="color:rgb(187, 91, 171);"><big>cima</big></span> para <span style="color: rgb(187, 91, 171) ;"><big>baixo</big></span>, partindo <span style="color: rgb(187, 91, 171);"><big>da imagem padrão</big></span>, então deve ficar:</p>
+            
+         <p><ul><li>Se o comprimento da tela for menor que o tamanho da <span style="color: darkcyan;">imagem média</span>(ex: 700px), então a imagem será substituída pela imagem <span style="color: blue;">pequena</span></li>
+             <li>Se o comprimento da tela for menor que o tamanho da <span style="color: darkcyan;">imagem grande</span>(ex: 1000px), então a imagem será substituída pela <span style="color: blue;">média</span></li>
+            </ul></p>
+     </p> <br>
+     <p><em><span style="color: rgb(199, 53, 61);"><big>A imagem padrão for pequena, então:</big></span></em></p>
+         <p><ul><li>Se o comprimento da tela for maior que o tamanho da <span style="color: darkcyan;">imagem média</span>(ex: 700px), então a imagem será substituída pela <span style="color: blue;">média</span></li>
+                <li>Se o comprimento da tela for maior que o tamanho da <span style="color: darkcyan;">imagem grande</span>(ex: 1000px), então a imagem será substituída pela imagem <span style="color: blue;">grande</span></li>
+         </ul> <br>
+         </p> 
+         <p>Lembrando que a ordem deve ser de <span style="color:rgb(187, 91, 171);"><big>cima</big></span> para <span style="color: rgb(187, 91, 171) ;"><big>baixo</big></span>, partindo <span style="color: rgb(187, 91, 171);"><big>da imagem padrão</big></span>, então deve ficar:</p>
+            
+         <p><ul><li>Se o comprimento da tela for maior que o tamanho da <span style="color: darkcyan;">imagem grande</span>(ex: 1000px), então a imagem será substituída pela imagem <span style="color: blue;">grande</span></li>
+             <li>Se o comprimento da tela for maior que o tamanho da <span style="color: darkcyan;">imagem média</span>(ex: 700px), então a imagem será substituída pela <span style="color: blue;">média</span></li>
+            </ul></p>
+     </p> <br>
+
+     <h2>Observação! </h2>
+     <h3>O indicado é que o max-width seja <big><span style="color: rgba(194, 26, 116, 0.856);">50px maior</span></big> que o tamanho original da imagem</h3>
+    </h3> <br>
+    <h2>Exemplo na prática:</h2>
+    <h3> 
+        <picture>
+            <source media="(min-width: 1000px)" srcset="foto-g.png" type="image/png">
+            <source media="(min-width: 700px)" srcset="foto-m.png" type="image/png">
+            <img src="foto-p.png" alt="foto pequena">
+        </picture>
+    </h3>
+</body>         
+</html>

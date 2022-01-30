@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Html e Css</title>
+    <style>
+    
+        body {
+            background-color:rgb(211, 232, 233);
+            background-image: linear-gradient(45deg, rgba(168, 182, 197, 0.4), rgba(175, 123, 168, 0.4));
+        }
+        h1 {
+            font-size: 50px;
+        }
+        h2{
+         font-size: 35px;
+         color:#c95e67;
+
+        }
+        
+        h3 {
+            font-size: 20px;
+            color: #63458A;
+        }
+        main {
+            font-family: serif;
+            background-color: white;
+            width: 700px;
+            height: 750px;
+            margin: auto;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 6px 6px 5px rgba(138, 152, 153, 0.918);
+            padding-top: 1px;
+            background-image: linear-gradient(to bottom,#E9D2F4, #C2CFB2 );
+            padding-left: 10px;
+            padding-right: 10px;
+            background-attachment: fixed;
+        }
+        div {
+            background-color: rgba(243, 231, 231, 0.479);
+            width: 690px;
+            margin: auto;
+            border-radius: 10px;
+        }
+    
+    </style>
+</head>
+
+<body>
+<h1><abbr title="Cascading Style Sheets">CSS</abbr></h1>
+<hr color= "black">
+
+<main>
+    <h2 style="text-align: center;">Gradiente em CSS</h2>
+    <h3>Gradiente é como se fosse um degradê, que pode ser tanto de uma ou mais cores.
+        Para fazer esse efeito em CSS, usamos a propriedade <code><span style="color: rgb(79, 79, 196);">background-image</span></code>: <br>
+        <br><div>
+            <code><span style="color: cadetblue;">background-image</span>: <span style="color:darkgoldenrod;">linear-gradient</span>
+                (to <span style="color: indianred;">bottom</span>,<span style="color: indianred;">#E9D2F4</span>,<span style="color: indianred;">#73C2BE</span>);</code>
+            </div>  <br>
+     <span style="color: rgb(79, 79, 196);">Linear-gradient</span> indica que o tipo é gradiente linear. <br>
+     <span style="color: rgb(79, 79, 196);">To bottom</span> indica a direção, ou seja, para baixo. <br>
+     Os <span style="color: rgb(79, 79, 196);">códigos</span> indicam as cores do gradiente, em sequência. 
+     <p>O outro tipo de gradiente é o radial:</p>
+     <div>
+        <code><span style="color: cadetblue;">background-image</span>: <span style="color:darkgoldenrod;">radial-gradient</span>
+            (<span style="color: indianred;">circle</span>,<span style="color: indianred;">#E9D2F4</span>,<span style="color: indianred;">#73C2BE</span>);</code>
+        </div> <br>
+     Como o próprio nome diz, ele gera um degradê em formato de círculo.
+     <p>Além de to <span style="color: indianred;">bottom</span>, existe também: to <span style="color: indianred;">top</span>, 
+        to <span style="color: indianred;">left</span> e to <span style="color: indianred;">right</span>
+    e também é possível especificar o grau, colocando o número seguido de <span style="color: rgb(142, 172, 91);">deg</span>. </p>
+    <p>Cajo haja algum problema ao usar essa propriedade, defina a altura para 100% nas configurações globais das CSS:</p>
+    <pre><code><span style="color: blue;">*</span> {
+          <span style="color: cadetblue;">height</span>:<span style="color: rgb(142, 172, 91);">100%</span>;
+}       </code></pre>
+ ou ajuste o background-attachment para que ele fique fixo: <br> <br>
+ <div><code><span style="color:cadetblue ;">background-attachment</span>: <span style="color:indianred;">fixed</span>;</code></div>
+    </h3>
+    
+</main>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Html e Css</title>
+    <style>
+        body {
+            background-color: rgb(211, 232, 233);
+        }
+        h1 {
+            font-size: 50px;
+        }
+        h2{
+         font-size: 35px;
+         color:rgba(15, 80, 202, 0.89);
+        }
+        
+        h3 {
+            font-size: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1><abbr title="Hypertext Markup Language">HTML</abbr> </h1>
+    <hr color= "black">
+    <h2><code>Trecho de códigos:</code></h2>
+    <h3>Já que há um amplo compartilhamento de códigos entre programadores,
+       <br> existe a tag<code> &lt;<span style="color: blue;">code</span>&gt;</code> para indicar que o texto se refere a um <code>código</code><br>
+       <em>Exemplo:</em> <br> <br>
+       <code>
+           <span style="color: rgb(68, 141, 209);">
+               function alert(){
+               window.alert('Exemplo de trecho de código')
+               window.alert('Percebe que as letras ficam monoespaçadas?')
+               }
+           </span>
+
+           
+       </code>
+       <p>Mas, como se pode notar, o código não ficou direitinho, isso porque é preciso 
+           <br>colocar a tag <code>&lt;<span style="color: blue;">pre</span>&gt;</code> para que haja a <mark>formatação</mark>
+           <pre><code>
+        <span style="color:rgb(68, 141, 209) ;">
+            function alert(){
+            window.alert('Exemplo de trecho de código')
+            window.alert('Percebe que as letras ficam monoespaçadas?')
+            }
+        </span></code></pre>
+       </p>
+    </h3>
+    <h2>Citações</h2>
+    <h3>SIMPLES:
+        <code>&lt;<span style="color: blue;">q</span>&gt; </code> 
+        <p>
+            <q>
+                Tell me and I forget,
+                Teach me and I remember,
+                Involve me and I learn
+            </q>
+        </p>
+
+    </h3>
+   <h3>COMPLEXA: <code>&lt;<span style="color: blue;">blockquote</span>&gt;</code></h3>
+<h3>
+    
+        <blockquote cite= "texto original">
+           <q>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ullam atque earum eum
+               provident
+               aperiam pariatur?
+               Eos odit quos ex, tempora magni, itaque voluptatum, repellat nulla iure
+               nam architecto libero.
+           </q>
+        </blockquote>
+      É possível dentro dessa tag colocar o parâmetro <span style="color: crimson;">cite</span>, onde é colocado um link para o texto original:
+      <code>
+          <pre>
+              &lt;<span style="color: blue;">blockquote</span> <span style="color:rgb(65, 197, 197);">cite</span><span style="color: rgb(199, 198, 198);">=</span><span style="color: rgb(212, 78, 45);">"link do texto original"</span>&gt;
+          </pre>
+            
+      </code>
+</h3>
+<h2><bdo dir="rtl">Texto invertido</bdo></h2>
+<h3>Caso precise por algum motivo do destino invertir o texto, use a tag <code>&lt;<span style="color: blue;">bdo</span>&gt;</code>
+e defina o parâmetro <span style="color:rgb(65, 197, 197) ;">dir</span>:
+<pre><code>&lt;<span style="color:blue;">bdo</span> <span style="color: rgb(65, 197, 197);">dir</span><span style="color: rgb(199, 198, 198);">=</span><span style="color: rgb(212, 78, 45);"><abbr title="right to left">"rtl"</abbr></span>&gt;</code></pre>
+ou 
+<pre><code>&lt;<span style="color:blue;">bdo</span> <span style="color: rgb(65, 197, 197);">dir</span><span style="color: rgb(199, 198, 198);">=</span><span style="color: rgb(212, 78, 45);"><abbr title="left to right">"ltr"</abbr></span>&gt;</code></pre>
+</h3>
+<h2>Abreviações:</h2>
+<h3>E, por último, temos a tag &lt;abbr&gt;, de abreviação, que possui a seguinte estrutura:
+    <pre><code>&lt;<span style="color: blue;">abbr</span> <span style="color: rgb(65, 197, 197);;">title</span><span style="color: rgb(199, 198, 198);">=</span><span style="color: rgb(212, 78, 45);">"significado da abreviação"</span>&gt;"abreviação"&lt;/<span style="color: blue;">abbr</span>&gt;</code></pre>
+</h3>
+</body>
+</html>

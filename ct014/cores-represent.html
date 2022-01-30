@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Html e Css</title>
+    <style>
+        body {
+            background-color:rgb(211, 232, 233);
+        }
+        h1 {
+            font-size: 50px;
+        }
+        h2{
+         font-size: 35px;
+         color:rgba(15, 80, 202, 0.89);
+        }
+        
+        h3 {
+            font-size: 20px;
+        }
+    
+    </style>
+</head>
+
+<body>
+<h1><abbr title="Cascading Style Sheets">CSS</abbr></h1>
+<hr color= "black">
+<h2>Representação de Cores</h2>
+<h3><big>Representação por nomes:</big>
+    <p>Faz uso dos nomes das cores para representá-las.</p>
+    <code>
+        <p><em>Exemplo:</em></p>
+        &lt;<span style="color:#0000ff;">p</span> <span style="color:cadetblue;">style</span>
+        <span style="color:indianred;">="color: blue;"</span>&gt;Olá&lt;/<span style="color: blue;">p</span>&gt;
+    </code>
+</h3> <br>
+<h3><big>Representação por códigos hexadecimais:</big>
+    <p>Os códigos hexadecimais utilizam 16 algarismos, representados a seguir:</p>
+    <code>
+        <p style="color: darkolivegreen;"><abbr title="menos significativo">0</abbr> 1 2 3 4 5 6 7 8 9 A B C D E <abbr title="mais significativo">F</abbr></p>
+    </code>
+       <p>Esses códigos são formados por 3 pares de 2 algarismos e representam as cores <span style="color: red;">vermelho</span>, <span style="color: green;">verde</span> e <span style="color: blue;">azul</span>.</p>
+    <code>
+        <p><em>Exemplo:</em></p>
+        &lt;<span style="color: blue;">p</span> <span style="color:cadetblue;">style</span>
+        <span style="color:indianred;">="color: #0000ff;"</span>&gt;Olá&lt;/<span style="color: blue;">p</span>&gt;
+    </code>
+        <p>Os dois primeiros <span style="color: darkolivegreen;">00</span> indicam que há nada de vermelho, os 
+            <span style="color: darkolivegreen;">00</span> seguintes indicam que há nada de verde e</p>
+            <p>os <span style="color: darkolivegreen;">ff</span> indicam que há o máximo da cor azul.</p>
+            <p style="color:darkolivegreen;">// Os códigos hexadecimais são representados com # no começo</p>
+</h3> <br>
+<h3><big>Representação por RGB:</big>
+    <p>RGB significa <span style="color: red;">Red</span>, <span style="color:green;">Green</span> e 
+        <span style="color:blue;">Blue</span>, ou seja, tem como base o mesmo conceito dos códigos 
+    hexadecimais, </p>
+    <p>só que em vez de misturar números com letras, essa representação utiliza números que vão de <abbr title="menos significativo">0</abbr> a <abbr title="mais significativo">255</abbr>.</p>
+    <code>
+        <p><em>Exemplo:</em></p>
+        &lt;<span style="color:rgb(0, 0, 255);">p</span> <span style="color:cadetblue;">style</span>
+        <span style="color:indianred;">="color: rgb(0, 0, 255);"</span>&gt;Olá&lt;/<span style="color: blue;">p</span>&gt;
+    </code>
+    <p>Como você pode perceber, o primeiro <span style="color: darkolivegreen;">0</span> indica a quantidade de vermelho, 
+    o segundo, a quantidade de </p>
+    <p>verde, e o terceiro a quantidade de azul.</p>
+</h3> <br>
+<h3><big>Representação por HSL:</big>
+    <p>HSL significa <span style="color: blue;">Hue</span>,<span style="color: blue;"> Saturation</span> e<spsan style="color: blue;"> Lightness</spsan>.</p>
+    <code>
+        <p><em>Exemplo:</em></p>
+        &lt;<span style="color: hsl(240, 100%, 50%);">p</span> <span style="color:cadetblue;">style</span>
+        <span style="color:indianred;">="color: hsl(240, 100%, 50%);"</span>&gt;Olá&lt;/<span style="color: blue;">p</span>&gt;
+    </code>
+    <p>A cor azul, portanto, possui 240 de matiz, 100% de saturação e 50% de luminosidade.</p>
+</h3> <br>
+</body>
+</html>

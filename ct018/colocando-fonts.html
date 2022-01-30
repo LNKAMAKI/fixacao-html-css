@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Html e Css</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @font-face {
+            font-family: 'Time' ;
+            src: url('KGWhatATime.ttf') format('truetype');
+    
+        }
+    
+    </style>
+</head> 
+
+<body>
+<main><abbr title="Cascading Style Sheets"><strong>CSS</strong></abbr></main>
+<hr color= "black">
+<h2 id="tipograf" style="text-align: center; font-family: Time;">COLOCANDO FONTES</h2>
+<div id="efect"></div>
+<div id="fontypes" style="text-align: center;">
+    <span style="font-size: 1.5em; font-family: Time;">SAFE COMBINATIONS</span>
+    <p>O Visual Studio Code nos oferece alguns tipos de fonte, como a Arial, Times New Roman e a Verdana, que 
+        são fontes bastante comuns. Podemos usá-las em nossos documentos determinando a propriedade 
+        <span style="color: cadetblue;">font-family</span>:
+               
+                    <p>
+<code style="font-size: 1.5em;">
+<pre>
+   <span style="color: goldenrod;">body</span> {
+   <span style="color: cadetblue;">font-family</span>: <span style="color: indianred;">Arial</span>;
+}
+</pre></code>
+                   </p> 
+   Normalmente colocamos mais de uma fonte, para caso a que queremos no nosso site 
+    não tenha suporte no navegador de quem está acessando:
+    <p>
+<code style="font-size: 1.5em;">
+<pre>
+   <span style="color: goldenrod;">body</span> {
+   <span style="color: cadetblue;">font-family</span>: <span style="color: indianred;">Arial</span>,<span style="color: indianred;"> Helvetica</span>, <span style="color: indianred;">sans-serif</span>;
+}
+</pre></code>
+                           </p> 
+    Essa combinação é um exemplo de safe combination e aparece como opção quando colocamos a 
+    <span style="color: cadetblue;">font-family</span>.  <br> <br>   
+    <span style="font-size: 1.5em; font-family: Time; font-weight: bold;">USANDO GOOGLE FONTS</span> 
+    <p>Como já falamos, o Visual Studio Code nos fornece uma quantidade de fontes muito limitada. Por isso, se quisermos usar uma fonte que não aparece nas opções, um bom site para consegui-la é o Google Fonts.</p>
+    <p>1 Passo: Escolher uma fonte 
+    </p>
+    <p>2 Passo: Selecionar o(s) estilos(s) 
+    </p>
+    <p>3 Passo: Copiar o código import 
+    </p>
+    <p>4 Passo: Colar o código na tag <span style="color: blue;">style</span> <br> 
+        <code style="font-size: 1.5em;">
+        <pre>
+&lt;<span style="color: blue;">style</span>&gt;
+ <span style="color: blueviolet;">@import</span> <span style="color: goldenrod;">url</span>(<span style="color: indianred;">'...'</span>)
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code> </p>
+        A partir daí será possível utilizar a fonte em qualquer lugar de seu site, determinando a font-family para o nome da fonte, que, nesse exemplo, é Kanit. <br> <br>
+        <span style="font-size: 1.7em; font-family: 'Time'; font-weight: bold;">COLOCANDO FONTES BAIXADAS</span> 
+     <p>Apesar do Google Fonts ter uma enorme variedade de fontes, podemos encontrar uma fonte que queiramos usar e que ele não tenha. Por isso, precisaremos
+         baixar em um outro site. Um bom site para fazer isso é o Dafont.
+         <p>1 Passo: Escolher a fonte</p>
+         <p>2 Passo: Baixá-la clicando no botão "Baixar"</p>
+         <p>3 Passo: Abrir o arquivo baixado na pasta</p>
+         <p>4 Passo: Clicar no arquivo e em "Extrair tudo"</p>
+         <p>5 Passo: Depois de extrair tudo aparecerá um ou mais arquivos, arraste-os para o arquivo do documento.</p>
+         <p>6 Passo: Crie o código <span style="color: blueviolet;">@font-face</span> na tag <span style="color: blue;">style</span> do documento:</p>
+         <code style="font-size: 1.5em;">
+<pre>
+   &lt;<span style="color: blue;">style</span>&gt; 
+   <span style="color: blueviolet;">@font-face</span> {
+   <span style="color: cadetblue;">font-family</span>: <span style="color: indianred;">'nome da fonte'</span> ;
+   <span style="color: cadetblue;">src</span>: <span style="color: goldenrod;">url</span>(<span style="color: indianred;">'nome do arquivo'</span>) <span style="color: goldenrod;">format</span>(<span style="color: indianred;">'formato do arquivo'</span>);
+}
+&lt;/<span style="color: blue;">style</span>&gt;</pre></code>A propriedade font-family contém o nome que se refere a fonte que você baixou, portanto pode ter o nome que você quiser e, a partir daí, sempre que for mencionar essa fonte para usá-la, precisará usar esse mesmo nome.
+<p>No <span style="color: goldenrod;">format</span> você coloca o formato da fonte. Se for ttf, seu formato é <span style="color: indianred;">truetype</span> e se for otf, seu formato é <span style="color: indianred;">opentype</span>. E, claro, tem como colocar mais de um formato, caso 
+o navegador não tenha compatibilidade com algum deles.</p>            
+        </p>
+</p>
+    
+</div>
+<div id="efect2"></div>
+
+</body>
+</html>

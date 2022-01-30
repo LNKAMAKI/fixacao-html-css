@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Html e Css</title>
+    <style>
+        body {
+            background-color:rgb(211, 232, 233);
+        }
+        h1 {
+            font-size: 50px;
+        }
+        h2{
+         font-size: 35px;
+         color:rgba(15, 80, 202, 0.89);
+        }
+        
+        h3 {
+            font-size: 20px;
+        }
+    
+    </style>
+</head>
+
+<body>
+<h1><abbr title="Cascading Style Sheets">CSS</abbr></h1>
+<hr color= "black">
+<h2>Estilos Inline</h2>
+<h3>Entre as formas de colocar estilo em HTML, o estilo inline é o que deve ser mais evitado.
+    <p>Ele consiste em adicionar estilo dentro das próprias <span style="color: blue;">tags</span>
+    <p><em>Exemplo:</em></p>
+    <code>&lt;<span style="color: blue;">body</span> <span style="color: cadetblue;">style</span>=<span style="color: indianred;">"background-color: blueviolet;"</span>&gt;</code>
+    <p>Esse método polui muito a parte de HTML, além de mudar o estilo de somente uma tag específica,</p>
+    <p>tornando o trabalho muito cansativo quando se precisa alterar o estilo de várias tags.</p> <br> 
+    <h2>Estilos Internos</h2>
+    <h3>É por isso que existe uma técnica melhor a se utilizar, que é definindo o estilo dentro da tag <code>&lt;<span style="color: blue;">style</span>&gt;</code>:
+        <p>
+            <code>
+                <pre>
+                    &lt;<span style="color: blue;">style</span>&gt;
+                    <span style="color: goldenrod;">body</span> {
+                        <span style="color: cadetblue;">background-color</span>: <span style="color: indianred;">blueviolet</span>;
+                    }
+                    &lt;/<span style="color: blue;">style</span>&gt;</pre>
+            </code>
+        </p>
+        <p>É recomendado que se use a tag após o título, obrigatoriamente na parte <code>&lt;<span style="color: blue;">head</span>&gt;</code> do documento</p>
+    </h3>
+</h3>
+</h3>
+</h3> <br> 
+<h2>Estilos Externos</h2>
+<h3>Mas o melhor entre eles, principalmente se o site tiver mais de um documento, é o estilo externo.
+<p>Nele, o estilo tem um arquivo separado, que se conecta ao documento HTML através do link: 
+    <p><code>&lt;<span style="color: blue;">link</span> <span style="color: cadetblue;">rel</span>=<span style="color: indianred;">"stylesheet"</span> <span style="color: cadetblue;">href</span>=<span style="color: indianred;">"style.css"</span>&gt;</code></p>
+    O parâmetro <code><span style="color: cadetblue;">rel</span></code> indica qual é o destino, que no caso é 
+        <code><span style="color:indianred;">stylesheet</span></code>, e o parâmetro <span style="color: cadetblue;">href</span> define o
+        nome do documento, que <p>pode ser outro sem ser <code><span style="color: indianred;">style.css</span></code>  <span style="color: darkolivegreen;">  // mas precisa conter <span style="color: indianred;"><code>.css</code></span></span></p>
+
+</h3>
+</body>
+</html>

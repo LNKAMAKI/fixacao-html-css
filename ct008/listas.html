@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Html e Css</title>
+    <style>
+        body {
+            background-color: rgb(211, 232, 233);
+        }
+        h1 {
+            font-size: 50px;
+        }
+        h2{
+         font-size: 35px;
+         color:rgba(204, 72, 72, 0.89);
+        }
+        
+        h3 {
+            font-size: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1><abbr title="Hypertext Markup Language">HTML</abbr> </h1>
+    <hr color= "black">
+    <h2><span style="font-size: 40px;"><span style="color:rgba(184, 78, 8, 0.918);">LISTAS &#x1F4DD</span></span></h2>
+    <h2>Ordered Lists:</h2>
+    <h3>Fazem uso da tag <code>&lt;<span style="color: blue;">ol</span>&gt;</code>, que conté os
+        <code>&lt;<span style="color: blue;"><abbr title="list item">li</abbr></span>&gt;</code> 
+        
+            <pre><code>   &lt;<span style="color: blue;">ol</span>&gt;
+        &lt;<span style="color: blue;">li</span>&gt; item 1
+        &lt;<span style="color: blue;">li</span>&gt; item 2
+        &lt;<span style="color: blue;">li</span>&gt; item 3
+        &lt;<span style="color: blue;">li</span>&gt; item 4
+   &lt;/<span style="color: blue;">ol</span>&gt; </code></pre>
+   É possível escolher a forma de ordenação desta lista, usando o parâmetro <code><span style="color:rgb(65, 197, 197);">type</span></code>, que
+   pode conter: <br>
+   <pre><code><span style="color: rgb(119, 175, 179);">
+        1 - 1, 2, 3, 4, 5
+        A - A, B, C, D, E
+        a - a, b, c, d, e
+        I- I, II, III, IV, V
+        i - i, ii, iii, iv, v
+    </span></code></pre>
+    </h3>
+    <h2>Unordered lists</h2>
+    <h3>Fazem uso da tag <code>&lt;<span style="color: blue;">ul</span>&gt;</code>, mas diferente das ordered lists,
+    não possuem qualquer indicação
+    <pre>
+        &lt;<span style="color: blue;">ul</span>&gt;
+               &lt;<span style="color: blue;">li</span>&gt; item 1
+               &lt;<span style="color: blue;">li</span>&gt; item 2
+               >&lt;<span style="color: blue;">li</span>&gt; item 3
+               &lt;<span style="color: blue;">li</span>&gt; item 4
+        &lt;/<span style="color: blue;">ul</span>&gt;
+    </pre>
+    É possível modificar a forma como esta lista aparecerá, usando o parâmentro type, que pode conter: <br>
+    disc - <ul type= "disc"> <li></li></ul>
+    circle - <ul type= "circle"> <li></li></ul>
+    square - <ul type= "square"> <li></li></ul>
+    </h3>
+    <h2>Definition Lists</h2>
+    <h3>E, por último, temos as listas de definição, <code>&lt;<abbr title="definition list"><span style="color: blue;">dl</span></abbr>&gt;</code>, nas quais 
+        temos as tags <code>&lt;<abbr title="definition term"><span style="color: blue;">dt</span></abbr>&gt;</code> e 
+        <code>&lt;<abbr title="definition description"><span style="color: blue;">dd</span></abbr>&gt;</code>
+         <br><br><em>Exemplo: </em>
+        <dl>
+        <dt>DL</dt>
+        <dd>Definition List</dd>
+        <dt>DT</dt>
+        <dd>Definition term</dd>
+        <dt>DD</dt>
+        <dd>Definition Description</dd>
+         </dl>
+    </h3> 
+    
+</body>
+</html>

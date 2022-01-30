@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Html e Css</title>
+    <style>
+        body {
+            background-color:rgb(211, 232, 233);
+        }
+        h1 {
+            font-size: 50px;
+        }
+        h2{
+         font-size: 35px;
+         color:rgba(15, 80, 202, 0.89);
+        }
+        
+        h3 {
+            font-size: 20px;
+        }
+        h4 {
+            font-size: 18pt;
+        }
+    
+    </style>
+</head>
+
+<body>
+<h1><abbr title="Hypertext Markup Language">HTML</abbr></h1>
+<hr color= "black">
+<h2>Áudios 🔊:</h2>
+<h3>Colocar áudio em seu site também é simples e há duas maneiras de se fazer isso: <br>
+         <p>      <pre>        <code>&lt;<span style="color: blue;">audio</span> <span style="color: cadetblue;">src</span>=<span style="color: indianred;">"<abbr title="aqui é colocado o nome do arquivo">audio.mp3/ogg/wav"</abbr></span></code><code> <span style="color: cadetblue;"><abbr title="mostra os controles, de pause, duração...">controls</abbr> <abbr title="indica que deve começar a tocar automaticamente">autoplay</abbr></span>&gt;</audio> &lt;/<span style="color: blue;">audio</span>&gt;</code></pre>
+         </p>                 <pre>                                   ou</pre>
+        <p>          <pre><code>        &lt;<span style="color: blue;">audio</span><span style="color: cadetblue;"> <abbr title="pré carrega">preload</abbr></span>=<span style="color: indianred;">"<abbr title="parte do conteúdo do áudio">metadata</abbr>"</span> <span style="color: cadetblue;">controls autoplay <abbr title="faz com que o aúdio se repita em um loop">loop</abbr></span>&gt; <br>
+        &lt;<span style="color: blue;;">source</span> <span style="color: cadetblue;">src</span>=<span style="color: indianred;">"believe.mp3"</span> <span style="color: cadetblue;">type</span>=<span style="color: indianred;">"audio/mpeg"</span>>
+        &lt;<span style="color: blue;;">source</span> <span style="color: cadetblue;">src</span>=<span style="color: indianred;">"believe.ogg"</span> <span style="color: cadetblue;">type</span>=<span style="color: indianred;">"audio/ogg"</span>>
+        &lt;<span style="color: blue;;">source</span> <span style="color: cadetblue;">src</span>=<span style="color: indianred;">"believe.wav"</span> <span style="color: cadetblue;">type</span>=<span style="color: indianred;">"audio/wav"</span>>
+        &lt;<span style="color: blue;">p</span>&gt;Não foi possível carregar o áudio: 
+        &lt;<span style="color: blue;">a</span> <span style="color: cadetblue;">href</span>=<span style="color: indianred;">"believe.mp3"</span> <span style="color: cadetblue;">download</span>=<span style="color: indianred;">"believe.mp3"</span> <span style="color: cadetblue;">type</span>=<span style="color: indianred;">"audio/mpeg"</span>&gt;Baixar&lt;/<span style="color: blue;">a</span>&gt;&lt;/<span style="color: blue;">p</span>&gt;        
+                
+        &lt;/<span style="color: blue;">audio</span>&gt;</code></pre>
+        <p> O segundo exemplo é mais recomendado, pois nem todo navegador é compatível com o formato de áudio que
+            escolhemos, <br> <br> ou seja, se ele não suportar mp3, ele tentará carregar o áudio no formato ogg e se não 
+            conseguir, tentará o formato wav.
+        </p>
+        </p>
+       <audio preload="metadata" controls>
+           <source src="believe.mp3" type="audio/mpeg">
+           <p>Não foi possível carregar o áudio: 
+               <a href="believe.mp3" download="believe.mp3" type="audio/mpeg">Baixar</a></p>
+       </audio> <br> <br>
+        <h2>Vídeos 🎥:</h2>
+        <h3>Colocar vídeo no seu site também é simples e há como o vídeo estar hospedado <span style="color: blue;">localmente</span> ou <span style="color: blue;">externamente</span></h3>
+        <h4><span style="font-family: sans-serif;"><span style="color: rgb(133, 13, 155);">Hospedagem Local</span></span></h4>
+         <p><video width="800" src="wrecked-video.mp4" controls loop></video></p>
+         <h3><pre>           <code>&lt;<span style="color: blue;">video</span> <span style="color: cadetblue;"><abbr title="largura do vídeo">width</abbr></span>=<span style="color: indianred;">"800"</span> <span style="color: cadetblue;"><abbr title="source">src</abbr></span>=<span style="color: indianred;">"video.mp4/m4v/ogv/webm"</span> <span style="color: cadetblue;">controls autoplay</span>&gt;</video></code></pre>
+         <pre>                                ou</pre>
+         <p> 
+             <code>
+                 <pre>           &lt;<span style="color: blue;">video</span> <span style="color: cadetblue;">width</span>=<span style="color: indianred;">"800"</span> <span style="color: cadetblue;"><abbr title="imagem que aparece antes do usuário dar play">poster</abbr></span>=<span style="color: indianred;">"thumb.png"</span> <span style="color: cadetblue;">controls autoplay</span>&gt;
+                     &lt;<span style="color: blue;">source</span> <span style="color: cadetblue;">src</span>=<span style="color: indianred;">"video.mp4"</span> <span style="color: cadetblue;">type</span>=<span style="color: indianred;">"video/mp4"</span>&gt;
+                     &lt;<span style="color: blue;">source</span> <span style="color: cadetblue;">src</span>=<span style="color: indianred;">"video.m4v"</span> <span style="color: cadetblue;">type</span>=<span style="color: indianred;">"video/mp4"</span>&gt;
+                     &lt;<span style="color: blue;">source</span> <span style="color: cadetblue;">src</span>=<span style="color: indianred;">"video.webm"</span> <span style="color: cadetblue;">type</span>=<span style="color: indianred;">"video/webm"</span>&gt;
+                     &lt;<span style="color: blue;">source</span> <span style="color: cadetblue;">src</span>=<span style="color: indianred;">"video.ogv"</span> <span style="color: cadetblue;">type</span>=<span style="color: indianred;">"video/ogg"</span>&gt;
+                     &lt;<span style="color: blue;">p</span>&gt;Infelizmente o seu navegador não conseguiu carregar o vídeo.&lt;/<span style="color: blue;">p</span>&gt;
+           &lt;/<span style="color: blue;">video</span>&gt;
+                 </pre>
+             </code>
+            </p>
+        </h3>
+        <h3>Assim como o áudio, a segunda opção é mais apropriada, pois se o navegador não suportar mp4, tentará carregar o formato m4v
+            <p>e se não conseguir carregá-lo tentará o webm, e por aí vai.</p>
+        </h3> <br>
+         <h4><span style="color: rgb(133, 13, 155);"><span style="font-family: sans-serif;">Hospedagem Externa</span></span></h4>
+         <h3>A hospedagem local, porém, pode ter altos custos devido a quantidade de MBs que arquivos como estes possuem, por isso é 
+             <p>recomendável hospedar o vídeo em um outro local, como no <span style="color:red;">Youtube</span> ou no <span style="color: blue;">Vimeo</span>, por exemplo.</p>
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/eF9Qoc6p_4Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br>
+             <ol>
+                 <li style="color: blue;"><span style="color: black;">Passo: Escolher o vídeo que você quer adicionar ao seu site:
+                 <p><img src="choose-video.jpeg" alt="escolhendo o vídeo"></p>
+                </span></li> <br>
+                 <li style="color: blue;"><span style="color: black;">Passo: Clicar no botão "compartilhar", localizado abaixo do vídeo:
+                 <p><img src="share-img.jpeg" alt="botão de compartilhar"></p>
+                </span></li>
+                 <li style="color: blue;"><span style="color: black;">Passo: Clicar no botão "incorporar":
+                 <p><img src="incorp-img.jpeg" alt="botão incorporar"></p>
+                </span></li>
+                <li style="color: blue;"><span style="color: black;">Passo: Clicar no botão "copiar" para copiar o código em HTML:
+                    <p><img src="copy-img.jpeg" alt="botão de copiar"></p>
+                </span></li>
+                    <li style="color: blue;"><span style="color: black;">Passo: Colar o código no VS Code.
+                   </span></li>
+             </ol>
+            </h3>
+            </h3>
+</body>
+</html>

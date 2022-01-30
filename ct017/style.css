@@ -1,0 +1,61 @@
+
+body {
+    background-color: #4ABDD8;
+} 
+
+main {
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+h2{
+ font-size: 35px;
+ color:#013440;
+}
+
+h3 {
+    font-size: 20px;
+}
+div#fontypes {
+    background-color: white ;
+    margin: auto;
+    width: 880px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 2550px;
+    font: italic bold 0.4cm Arial;
+}
+
+h2#tipograf {
+background-color: #B54EDD;
+margin: auto;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+color: rgb(236, 236, 133); 
+width: 900px;
+padding-top: 5px;
+padding-bottom: 8px;
+}
+img {
+    margin: auto;
+}
+div#efect, div#efect3, div#efect5  {
+background-color: #8606B8;
+color: #8606B8;
+width: 900px;
+margin: auto;
+text-align: center;
+height: 10px;
+}
+div#efect2, div#efect4, div#efect6 {
+    background-color: #FFA853;
+    color: #FFA853 ;
+    width: 900px;
+    height: 15px;
+    margin: auto;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    }
+    
+    

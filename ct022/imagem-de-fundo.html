@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Html e Css</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    .test {
+        background-color: white;
+         margin-left: -10px; 
+         margin-right: -10px;
+         height: 500px;
+          background-image:url("https://gustavoguanabara.github.io/html-css/imagens/mascote.png");
+          background-size: cover;
+          background-position: center center ;
+
+    }
+</style>
+</head> 
+
+<body>
+
+<main><abbr title="Cascading Style Sheets"><strong>CSS</strong></abbr></main>
+<hr color= "black">
+<h2 id="tipograf" style="text-align: center; font-family: Time;">IMAGEM DE FUNDO</h2>
+<div id="efect"></div>
+<div id="fontypes" style="text-align: center;">
+   <span class="title">COLOCANDO IMAGENS DE FUNDO</span>
+   <p>Assim como para o efeito degradê, usaremos a propriedade <span class="prop">background-image</span>
+    para colocarmos uma imagem de fundo dentro de uma caixa:
+    <br>
+    <code>
+          <span class="tag2">style</span><br>
+    <span class="seletor">body</span> { <br>
+        <span class="prop">background-image</span>: <span class="seletor">url(<span class="string">imagem.png</span>)</span>;
+        <br> } <br>
+        <span class="tag3">style</span><br>
+    </code>
+</p>
+<p>Quando testamos no navegador, podemos perceber que ele irá automaticamente replicá-la quantas vezes for necessário 
+    para ocupar todo o espaço da tela.
+     </p>
+     <span class="title">BACKGROUND-REPEAT</span>
+     <p>Podemos mudar a propriedade <span class="prop">background-repeat</span> se quisermos que a imagem não se repita ou ajustar a sua repetição:   </p>
+     <code>
+        <span class="tag2">style</span><br>
+  <span class="seletor">body</span> { <br>
+      <span class="prop">background-image</span>: <span class="seletor">url(<span class="string">imagem.png</span>)</span>;<br>
+      <span class="prop">background-repeat</span>: <span class="string">no-repeat</span>;
+      <br> } <br>
+      <span class="tag3">style</span><br>
+  </code>
+  <p>Quando ajustamos para <span class="string">no-repeat</span> a imagem simplesmente não se repete</p>
+  <code>
+    <span class="tag2">style</span><br>
+<span class="seletor">body</span> { <br>
+  <span class="prop">background-image</span>: <span class="seletor">url(<span class="string">imagem.png</span>)</span>;<br>
+  <span class="prop">background-repeat</span>: <span class="string">repeat-x</span>;
+  <br> } <br>
+  <span class="tag3">style</span><br>
+</code>
+<p>A propriedade <span class="string">repeat-x</span> faz a imagem se repetir somente no eixo x.</p>
+<code>
+    <span class="tag2">style</span><br>
+<span class="seletor">body</span> { <br>
+  <span class="prop">background-image</span>: <span class="seletor">url(<span class="string">imagem.png</span>)</span>;<br>
+  <span class="prop">background-repeat</span>: <span class="string">repeat-y</span>;
+  <br> } <br>
+  <span class="tag3">style</span><br>
+</code>
+<p>A propriedade <span class="string">repeat-y</span> faz a imagem se repetir somente no eixo y.</p>
+<span class="title">POSICIONAMENTO DE REFERÊNCIA</span>
+<p>Também temos a propriedade background-position, que serve para determinar a partir de qual posição queremos que ele se repita.
+    Essa propriedade aceita os seguintes valores: </p>
+    <img src="Captura da Web_22-11-2021_172931_github.com.jpeg" alt="">
+
+    <p class="title" style="margin-bottom: 0;">LEFT TOP:</p>
+    <img src="left-top.jpeg" alt="" style="transform: scale(0.8); margin: 0px;">
+
+    <p class="title" style="margin-bottom: 0;">LEFT BOTTOM:</p>
+    <img src="left-bottom.jpeg" alt="" style="transform: scale(0.8); margin: 0px;">
+
+    <p class="title" style="margin-bottom: 0;">LEFT CENTER:</p>
+    <img src="left-center.jpeg" alt="" style="transform: scale(0.8); margin: 0px;">
+
+
+    <p class="title" style="margin-bottom: 0;">RIGHT TOP:</p>
+    <img src="right-top.jpeg" alt="" style="transform: scale(0.8); margin: 0px;">
+
+
+    <p class="title" style="margin-bottom: 0;">RIGHT BOTTOM:</p>
+    <img src="right-bottom.jpeg" alt="" style="transform: scale(0.8); margin: 0px;">
+
+    <p class="title" style="margin-bottom: 0;">RIGHT CENTER:</p>
+    <img src="right-center.jpeg" alt="" style="transform: scale(0.8); margin: 0px;">
+
+    <p class="title" style="margin-bottom: 0;">CENTER CENTER:</p>
+    <img src="center-center.jpeg" alt="" style="transform: scale(0.8); margin: 0px;">
+    
+  <span class="title">BACKGROUND-SIZE</span>
+  <p>Podemos também redimensionar a imagem usando a propriedade <span class="prop">background-size:</span></p>
+  <code>
+    <span class="tag2">style</span><br>
+<span class="seletor">body</span> { <br>
+  <span class="prop">background-size</span>: <span class="string">10px 20px</span></span>;
+  <br> } <br>
+  <span class="tag3">style</span><br>
+</code>
+<p>Fazendo essa configuração, a imagem passará a ter 10px de largura e 20px de altura</p>
+<code>
+    <span class="tag2">style</span><br>
+<span class="seletor">body</span> { <br>
+  <span class="prop">background-size</span>: <span class="string">cover</span></span>;
+  <br> } <br>
+  <span class="tag3">style</span><br>
+</code>
+<p>Atribuindo o valor <span class="string">cover</span>, o tamanho da imagem será ajustado de modo que ela seja sempre totalmente exibida na tela</p>
+<code>
+    <span class="tag2">style</span><br>
+<span class="seletor">body</span> { <br>
+  <span class="prop">background-size</span>: <span class="string">contain</span></span>;
+  <br> } <br>
+  <span class="tag3">style</span><br>
+</code>
+<p>Já o valor <span class="string">contain</span> redimensiona a imagem para que ela cubra o container, mesmo que para isso ocorram alguns eventuais cortes</p>
+<span class="title">BACKGROUND-ATTACHMENT</span>
+<p>E, por último, podemos configurar a propriedade <span class="prop">background-attachment</span> atribuindo a ela os seguintes valores:</p>
+<code>
+    <span class="tag2">style</span><br>
+<span class="seletor">body</span> { <br>
+  <span class="prop">background-attachment</span>: <span class="string">scroll</span></span>;
+  <br> } <br>
+  <span class="tag3">style</span><br>
+</code>
+<p>Essa é a configuração padrão, que faz com que a imagem de fundo role junto com o conteúdo</p>
+
+<code>
+    <span class="tag2">style</span><br>
+<span class="seletor">body</span> { <br>
+  <span class="prop">background-attachment</span>: <span class="string">fixed</span></span>;
+  <br> } <br>
+  <span class="tag3">style</span><br>
+</code>
+<p>Esse outro valor, <span class="string">fixed</span>, deixa a imagem fixada enquanto o conteúdo vai sendo rolado</p>
+<span class="title">SHORTHAND BACKGROUND</span>
+<p>Agora que já vimos todas as propriedades, vamos aprender como juntar todas os valores dentro de uma propriedade </p>
+<code>
+    <span class="tag2">style</span><br>
+<span class="seletor">body</span> { <br>
+    <span class="prop">background-color</span>: <span class="string">black</span></span>; <br>
+    <span class="prop">background-image</span>: <span class="seletor">url(<span class="string">imagem.png</span>)</span>; <br>
+   <span class="prop">background-position</span>: <span class="string">center center</span></span>; <br>
+  <span class="prop">background-repeat</span>: <span class="string">no-repeat</span></span>; <br>
+  <span class="prop">background-size</span>: <span class="string">cover</span></span>; <br>
+  <span class="prop">background-attachment</span>: <span class="string">fixed</span></span>; 
+  <br> } <br>
+  <span class="tag3">style</span><br>
+</code>
+<p>Em vez de fazer todas essas declarações, podemos configurar todos os valores dentro da propriedade background:</p>
+<code>
+    <span class="tag2">style</span><br>
+<span class="seletor">body</span> { <br>
+    <span class="prop">background</span>: <span class="string">black <span class="seletor">url(<span class="string">imagem.png</span>)</span> center center no-repeat fixed</span>; <br>
+    <span class="prop">background-size</span>: <span class="string">cover</span></span>; 
+    <br> } <br>
+  <span class="tag3">style</span><br>
+</code>
+<br>
+<p class="impor">OBS: Perceba que a shorthand <span class="prop">background</span> deveria conter a propriedade <span class="prop">background-size</span>, mas, como não funciona quando testamos no navegador, precisamos configurá-la separada das demais  </p> <br>
+
+</div>
+   <div id="efect2"></div>
+</body>
+</html>
