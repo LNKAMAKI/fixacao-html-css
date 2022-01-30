@@ -29,7 +29,7 @@ h3 {
 div#fontypes {
     background-color: white ;
     margin: auto;
-    width: 880px ;
+    max-width: 880px;
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -44,7 +44,7 @@ margin: auto;
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
 color: rgb(236, 236, 133); 
-width: 900px;
+max-width: 900px;
 padding-top: 5px;
 padding-bottom: 8px;
 }
@@ -54,7 +54,7 @@ img {
 div#efect, div#efect3, div#efect5  {
 background-color: #8606B8;
 color: #8606B8;
-width: 900px;
+max-width: 900px;
 margin: auto;
 text-align: center;
 height: 10px;
@@ -62,7 +62,7 @@ height: 10px;
 div#efect2 {
     background-color: #FFA853;
     color: #FFA853 ;
-    width: 900px;
+    max-width: 900px;
     height: 15px;
     margin: 0px auto 0px auto;
     text-align: center;
@@ -72,7 +72,7 @@ div#efect2 {
 .prop {
     color: cadetblue;
 }
-.seletor {
+.sel {
     color: goldenrod;
 }
 .tag {
@@ -100,10 +100,10 @@ div#efect2 {
     color: black;
     content: '>';
 }
-.string {
+.str {
 color: indianred;
 }
-.value {
+.val {
     color: olivedrab;
 }
 
@@ -118,7 +118,7 @@ div#d {
     margin:auto ;
     padding: 10px;
     text-align: center;
-    
+    max-width: 550px;
 }
 ul {
     list-style-position: inside;
@@ -129,6 +129,17 @@ li::marker {
 code {
     font-size: 1.5em;
 }
-
+.color {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+}
+.title {
+    display: inline-block;
+    margin: 5px 0px;
+}
+p {
+    margin: 5px 0px;
+}
 
 
