@@ -48,10 +48,10 @@
         }
         .scroll {
             margin: auto;
-            height: 200px;
+           height: 200px; 
             max-width: 305px;
-            overflow-y: auto;
             overflow-x: auto;
+            overflow-y: auto;
         }
       
         .zebrado th {
@@ -80,6 +80,9 @@
       
         #n2 th {
             border-width: 0px;
+            width: 192px;
+            padding-left: 0px;
+            padding-right: 0px;
         }
         #n2 tr {
             border: 1px solid black;
@@ -88,8 +91,24 @@
             background-color: blue;
         }
 
+        #n2-1 th {
+            border-width: 0px;
+            width: 192px;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        #n2-1 tr {
+            border: 1px solid black;
+        }
+        #n2-1 tr:nth-child(2n - 1) {
+            background-color: blue;
+        }
+
         #n3 th {
             border-width: 0px;
+            width: 192px;
+            padding-left: 0px;
+            padding-right: 0px;
         }
         #n3 tr {
             border: 1px solid black;
@@ -110,6 +129,11 @@
             font-size: 1.3em;
             font-weight: bold;
             padding: 10px;
+            background-color: white;
+        }
+        caption.stick {
+            position: sticky;
+            top: 0px;
         }
         caption {
             border: 1px solid black;
@@ -149,7 +173,8 @@
             <span class="color" style="background-color: lightseagreen;"></span> table data <br>
         </p>
     <p>Exemplo de tabela simples:</p>
-    <table style="margin: 10px auto 10px auto;" >             
+    <table style="margin: 10px auto 10px auto;" >    
+        <caption>a</caption>         
         <tr> <!--Primeira linha-->
             <td class="dado">A1
             <td>B1
@@ -209,7 +234,7 @@
 </code><br>
 <p>Exemplo de tabela grande:</p>
 <div class="scroll" style="margin-bottom: 10px;">
-    <table style="margin: 10px auto;">
+    <table style="margin: 10px auto;position: relative;">
         <colgroup>
             <!--
                 <col class="cnome">
@@ -535,39 +560,27 @@
 <table id="n2">
     <tr>
         <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
+       
+    </tr>
+    <tr>
+        <th>2</th>
+       
     </tr>
     <tr>
         <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
+        
+    </tr>
+    <tr>
+        <th>4</th>
+        
     </tr>
     <tr>
         <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
+        
     </tr>
     <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
+        <th>6</th>
+        
     </tr>
     
 </table>
@@ -576,51 +589,255 @@
 <table id="n3">
     <tr>
         <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
+        
     </tr>
     <tr>
         <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
+        
+    </tr>
+    <tr>
+        <th>3</th>
+        
     </tr>
     <tr>
         <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
+        
     </tr>
     <tr>
         <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
+        
     </tr>
     <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
+        <th>6</th>
+        
     </tr>
     
 </table>
+<p>Também é possível fazer com que fiquem azuis as linhas que correspondem aos números que vem imediatamente antes dos múltiplos de 2(por exemplo): </p>
+<table id="n2-1">
+    <tr>
+        <th>2 - 1</th>
+        
+    </tr>
+    <tr>
+        <th></th>
+        
+    </tr>
+    <tr>
+        <th>4 - 1 </th>
+        
+    </tr>
+    <tr>
+        <th></tr>
+        
+    </tr>
+    <tr>
+        <th>6 - 1</th>
+        
+    </tr>
+    <tr>
+        <th></th>
+        
+    </tr>
+    
+</table>
+<p>E para isso basta escrevermos <span class="sel">- 1</span> depois de <span class="sel">2n</span>:</p>
 <code>
     <span class="tag2">style</span><br>
-<span class="sel">th, td</span> { <br>
-  <span class="prop">vertical-align</span>: <span class="str">top/middle/bottom</span>;<br>
-   } <br>
-  <span class="tag3">style</span><br>
-</code>
+    <span class="sel">table tr:nth-child(2n - 1)</span> { <br>
+        <span class="prop">background-color</span>: <span class="str">blue</span>;<br>
+         } <br>
+ 
+  <span class="tag3">style</span>
+</code><br>
+<p class="impor">Em vez de <span class="sel">2n</span>, você pode escrever <span class="sel">even</span> e, em vez de <span class="sel">2n - 1</span>, você pode escrever <span class="sel">odd</span></p>
 
+<span class="title">CABEÇALHO FIXO EM TABELAS GRANDES</span>
+<p>Outro recurso que pode ser usado em tabelas grandes é o cabeçalho fixo, que permite que o leitor role para baixo sem ter que voltar atrás para ver as informações presentes nele:</p>
+<div class="scroll" style="margin-bottom: 10px;">
+    <table style="margin: 10px auto;position: relative;">
+        <colgroup>
+            <!--
+                <col class="cnome">
+                <col class="csexo">
+                <col class="cidade">
+                <col class="cgrupo" span="3">
+                <col class="cprof">
+                -->
+                <col class="amarelo">
+                <col class="verde">
+                <col class="amarelo">
+                <col class="verde">
+        </colgroup>
+        <caption class="stick">Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Carmen</td>
+            <td>F</td>
+            <td>31</td>
+            <td>Empresária</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>F</td>
+            <td>42</td>
+            <td>Administradora</td>
+        </tr>
+        <tr>
+            <td>Cláudio</td>
+            <td>M</td>
+            <td>28</td>
+            <td>Farmacêutico</td>
+        </tr>
+        <tr>
+            <td>Mariel</td>
+            <td>M</td>
+            <td>23</td>
+            <td>Advogado</td>
+        </tr>
+        <tr>
+            <td>Gustavo</td>
+            <td>M</td>
+            <td>43</td>
+            <td>Programador</td>
+        </tr>
+        <tr>
+            <td>Roberta</td>
+            <td>F</td>
+            <td>36</td>
+            <td>Engenheira Civil</td>
+        </tr>
+        <tr>
+            <td>Olávio</td>
+            <td>M</td>
+            <td>24</td>
+            <td>Dentista</td>
+        </tr>
+        <tr>
+            <td>Rosanne</td>
+            <td>F</td>
+            <td>52</td>
+            <td>Diretora</td>
+        </tr>
+        <tr>
+            <td>Juliana</td>
+            <td>F</td>
+            <td>48</td>
+            <td>Coordenadora</td>
+        </tr>
+        <tr>
+            <td>Ricardo</td>
+            <td>M</td>
+            <td>44</td>
+            <td>Lixeiro</td>
+        </tr>
+        <tr>
+            <td>Milena</td>
+            <td>F</td>
+            <td>31</td>
+            <td>Bióloga</td>
+        </tr>
+        <tr>
+            <td>Márcio</td>
+            <td>M</td>
+            <td>42</td>
+            <td>Historiador</td>
+        </tr>
+        <tr>
+            <td>Eloise</td>
+            <td>F</td>
+            <td>23</td>
+            <td>Engenheira de Software</td>
+        </tr>
+        <tr>
+            <td>Pedro</td>
+            <td>M</td>
+            <td>38</td>
+            <td>Pedreiro</td>
+        </tr>
+        <tr>
+            <td>Marta</td>
+            <td>F</td>
+            <td>29</td>
+            <td>Cientista</td>
+        </tr>
+        <tr>
+            <td>Carlos</td>
+            <td>M</td>
+            <td>34</td>
+            <td>Youtuber</td>
+        </tr>
+        <tr>
+            <td>Débora</td>
+            <td>F</td>
+            <td>47</td>
+            <td>Médica</td>
+        </tr>
+        <tr>
+            <td>Gilberto</td>
+            <td>M</td>
+            <td>62</td>
+            <td>Pediátra</td>
+        </tr>
+        <tr>
+            <td>Cláudia</td>
+            <td>F</td>
+            <td>43</td>
+            <td>Cozinheira</td>
+        </tr>
+        <tr>
+            <td>Kleiton</td>
+            <td>M</td>
+            <td>25</td>
+            <td>Skatista</td>
+        </tr>
+    </table>
+</div>
+<p>O código usado para chegar a esse resultado é bem simples: basta atribuir o valor <span class="str">relative</span> para a propriedade <span class="prop">position</span> da tabela e mudar a posição do <span class="tag">caption</span> para <span class="str">sticky</span>:</p>
+<code>
+    <span class="tag2">style</span><br>
+    <span class="sel">table</span> { <br>
+        <span class="prop">position</span>: <span class="str">relative</span>;<br>
+         } <br>
 
+         <span class="sel">caption</span> { <br>
+            <span class="prop">position</span>: <span class="str">sticky</span>;<br>
+                <span class="prop">top</span>: <span class="str">0px</span>;<br>
+             } <br>
+ 
+  <span class="tag3">style</span>
+</code><br>
+<p class="impor">Lembrando que a posição <span class="str">sticky</span> só funciona quando atribuimos um valor para a propriedade <span class="prop">top</span></p>
+<span class="title">MESCLAGEM DE CÉLULAS</span>
+<p>Agora vamos falar sobre como expandir células, ou seja, fazer com que elas ocupem mais de uma linha ou mais de uma coluna:</p>
+<table>
+   <tr>
+    <th>A</th>
+    <th colspan="2">B</th>
+   </tr>
+   <tr>
+    <TH>C</TH>
+    <TH>D</TH>
+    <TH>E</TH>
+   </tr>
+   <tr>
+    <TH>F</TH>
+    <TH>G</TH>
+    <TH>H</TH>
+   </tr>
+</table>
+<p>Na tabela acima a célula B está ocupando duas colunas, ou seja, ela tem um colspan de 2:</p>
 </div>  
 <div id="efect2"></div>
 </body>

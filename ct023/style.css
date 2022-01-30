@@ -128,6 +128,7 @@ li::marker {
 }
 code {
     font-size: 1.5em;
+    display: block;
 }
 .color {
     width: 10px;
