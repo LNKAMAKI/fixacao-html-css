@@ -157,6 +157,12 @@
         #filme th, td {
            width: max-content;
         }
+        #col1 {
+            background-color: green;
+        }
+        #col234 {
+            background-color: purple;
+        }
     
     </style>
 </head> 
@@ -945,7 +951,179 @@
     <span class="tag2">th <span class="prop">rowspan</span><span style="color: black;">=</span><span class="str">"3"</span> <span class="prop">scope</span><span style="color: black;">=</span><span class="str">"rowgroup"</span></span>
     Mulheres<span class="tag3">th</span><br>
 </code><br>
+<span class="title">AGRUPAMENTO DE COLUNAS COM COLGROUP</span>
+<p>Tendo como exemplo a tabela abaixo, suponhamos que você queira que todo <span class="tag">td</span> pertencente a coluna 1 tenha a cor verde. Como você faria isso? </p>
+<p>Usando os conhecimentos que vimos até agora, a única maneira de fazer isso seria mudando de um por um a cor de cada <span class="tag">td</span> da coluna.</p>
+<table>
+    <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    
+</table>
+<p>Porém, essa solução não é muito prática e por isso existe uma melhor, usando a tag <span class="tag">colgroup</span> dentro da tabela:</p>
+<code>
+    <span class="tag2">table</span>
+    <br><span class="tag2">colgroup</span>
 
+    <br><span class="tag2">col <span class="prop">id</span><span style="color: black;">=</span><span class="str">"col1"</span></span><br>
+    <span class="tag2">col <span class="prop">id</span><span style="color: black;">=</span><span class="str">"col2"</span></span><br>
+    <span class="tag2">col <span class="prop">id</span><span style="color: black;">=</span><span class="str">"col3"</span></span><br>
+    <span class="tag2">col <span class="prop">id</span><span style="color: black;">=</span><span class="str">"col4"</span></span><br>
+    <span class="tag2">col <span class="prop">id</span><span style="color: black;">=</span><span class="str">"col5"</span></span><br>
+    <span class="tag2">col <span class="prop">id</span><span style="color: black;">=</span><span class="str">"col6"</span></span><br>
+
+    <span class="tag3">colgroup</span><br>
+  ...<span class="tag3">table</span>
+</code><br>
+<p>Depois de identificar a primeira coluna como <span class="str">"col1"</span>, só falta mudar sua cor dentro do estilo:</p>
+<code>
+    <span class="tag2">style</span><br>
+         <span class="sel">#col1</span> { <br>
+            <span class="prop">background-color</span>: <span class="str">green</span>;<br>
+             } <br>
+  <span class="tag3">style</span>
+</code><br>
+<p>E o resultado será o seguinte:</p>
+<table>
+    <colgroup>
+        <col id="col1">
+    </colgroup>
+    <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+</table>
+<p>É possível agrupar mais de uma coluna usando a tag <span class="tag">col</span> junto com <span class="prop">span</span> para que, por exemplo, as colunas 2, 3 e 4 fiquem da cor roxa:</p>
+<code>
+    <span class="tag2">table</span>
+    <br><span class="tag2">colgroup</span>
+
+    <br><span class="tag2">col <span class="prop">id</span><span style="color: black;">=</span><span class="str">"col1"</span></span><br>
+    <span class="tag2">col <span class="prop">id</span><span style="color: black;">=</span><span class="str">"col2,3,4" </span><span class="prop">span</span><span style="color: black;">=</span><span class="str">"3"</span></span><br>
+
+    <span class="tag3">colgroup</span><br>
+  ...<span class="tag3">table</span>
+</code><br>
+<table>
+    <colgroup>
+        <col id="col1">
+        <col id="col234" span="3">
+    </colgroup>
+    <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+</table>
+<p class="impor">Não esqueça que para agrupar colunas com a tag <span class="tag">col</span> basta colocar <span class="prop">span</span>(sem o col na frente)</p>
 </div>  
 <div id="efect2"></div>
 </body>
