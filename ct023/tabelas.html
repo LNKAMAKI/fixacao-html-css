@@ -53,6 +53,9 @@
             overflow-x: auto;
             overflow-y: auto;
         }
+        .scroll2 {
+            overflow-x: auto;
+        }
       
         .zebrado th {
             background-color: papayawhip;
@@ -116,6 +119,12 @@
         #n3 tr:nth-child(3n) {
             background-color: blue;
         }
+        #focus {
+            background-color: rgb(0, 153, 255);
+        }
+        #focus2 {
+            background-color: rgb(250, 76, 111);
+        }
     </style>
      <style>
         body {
@@ -140,16 +149,20 @@
         }
         th, td {
             border: 1px solid black;
-            width: 40px;
             height: 30px;
+            width: 40px;
             padding: 4px;
             text-align: center;
         }
+        #filme th, td {
+           width: max-content;
+        }
+    
     </style>
 </head> 
 
 <body>
-<main><abbr title="Cascading Style Sheets"><strong>CSS</strong></abbr></main>
+<main><strong>CSS</strong></main>
 <hr color= "black">
 <h2 id="tipograf" style="text-align: center; font-family: Time;">TABELAS</h2>
 <div id="efect"></div>
@@ -859,6 +872,80 @@
  <code>
     <span class="tag2">th <span class="prop">rowspan</span><span style="color: black;">=</span><span class="str">"3"</span></span>A<span class="tag3">th</span><br>
 </code><br>
+<span class="title">ESCOPOS DE GRUPO</span>
+<p>Além de col e row, podemos também atribuir os valores colgroup e rowgroup a um escopo de <span class="tag">th</span>.</p>
+<p>Isso acontece quando um th tem um col/rowspan, já que ele se refere aos dados de mais de uma coluna/linha.</p>
+<div class="scroll2">
+    <table id="filme">
+        <caption>
+            Filmes favoritos
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">Grupo</th>
+                <th scope="row">Nomes</th>
+                <th colspan="3" scope="colgroup" id="focus">Filmes</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th colspan="4" scope="row">Total</th>
+                <td>1000</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <th rowspan="3" scope="rowgroup" id="focus2">Mulheres</th>
+                <td>Ana Maria Santos</td>
+                <td>Allen</td>
+                <td>Rambo</td>
+                <td>Vingadores</td>
+            </tr>
+            <tr>
+                <td>Beatriz Souza</td>
+                <td>Hulk</td>
+                <td>Inception</td>
+                <td>Batman</td>
+            </tr>
+            <tr>
+                <td>Cláudia Melo</td>
+                <td>Oblivion</td>
+                <td>Matriz</td>
+                <td>Big hero</td>
+            </tr>
+            <tr>
+                <th rowspan="3" scope="rowgroup">Homens</th>
+                <td>Bruno Mendonça</td>
+                <td>Intocáveis</td>
+                <td>Amnésia</td>
+                <td>Gladiador</td>
+            </tr>
+            <tr>
+                <td>Daniel Lourenço</td>
+                <td>Wall-E</td>
+                <td>Oldboy</td>
+                <td>Dangal</td>
+            </tr>
+            <tr>
+                <td>Fabiano Mota</td>
+                <td>Star Wars 5</td>
+                <td>Taxi Driver</td>
+                <td>Toy Story</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p>Na tabela acima, o <span class="tag">th</span> Filmes tem um colspan de 3 colunas e, portanto, ele se refere aos dados de 3 colunas e, portanto, o seu escopo é de colgroup:</p>
+<code>
+    <span class="tag2">th <span class="prop">colspan</span><span style="color: black;">=</span><span class="str">"3"</span> <span class="prop">scope</span><span style="color: black;">=</span><span class="str">"colgroup"</span></span>
+    Filmes<span class="tag3">th</span><br>
+</code><br>
+<p>Agora, se analisarmos o <span class="tag">th</span> Mulheres, ele tem um rowspan de 3 linhas e o seu escopo é de rowgroup:</p>
+<code>
+    <span class="tag2">th <span class="prop">rowspan</span><span style="color: black;">=</span><span class="str">"3"</span> <span class="prop">scope</span><span style="color: black;">=</span><span class="str">"rowgroup"</span></span>
+    Mulheres<span class="tag3">th</span><br>
+</code><br>
+
 </div>  
 <div id="efect2"></div>
 </body>
