@@ -5,9 +5,6 @@ font-family: 'Time' ;
 src: url('KGWhatATime.ttf') format('truetype');
 
 }
-body {
-    background-color: #4ABDD8;
-}
 
 main {
     font-size: 50px;
@@ -30,15 +27,15 @@ div#fontypes {
     background-color: white ;
     margin: auto;
     max-width: 880px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
     height: fit-content;
     font: italic bold 0.4cm Arial;
     margin-bottom: 0px;
+    box-shadow:0px 0px 10px #b7b7b7;
 }
 
 h2#tipograf {
+box-shadow:0px 0px 10px #b7b7b7;
 background-color: #B54EDD;
 margin: auto;
 border-top-left-radius: 10px;
@@ -142,5 +139,6 @@ code {
 p {
     margin: 5px 0px;
 }
+
 
 
